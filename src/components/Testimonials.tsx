@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -42,18 +42,18 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="opiniones" className="py-24 relative">
+    <section id="opiniones" className="py-28 relative bg-muted/50">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Opiniones Reales</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Lo que dicen nuestros <span className="text-gradient-primary">clientes</span>
+          <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Opiniones</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-4">
+            Lo que dicen nuestros <span className="text-gradient-primary italic">clientes</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Más de 500 familias ya confían en MONTCARRE.
@@ -66,22 +66,23 @@ const Testimonials = () => {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-6 shadow-card hover:border-primary/20 hover:shadow-glow transition-all"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: i * 0.08 }}
+              className="bg-card border border-border rounded-3xl p-7 shadow-card hover:shadow-cinematic transition-shadow duration-300 relative"
             >
-              <div className="flex gap-1 mb-4">
+              <Quote className="w-8 h-8 text-primary/15 absolute top-5 right-5" />
+              <div className="flex gap-0.5 mb-5">
                 {[...Array(5)].map((_, j) => (
                   <Star key={j} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6 text-sm">"{t.text}"</p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center font-display font-bold text-primary text-sm">
+              <p className="text-foreground leading-relaxed mb-6 text-[15px]">"{t.text}"</p>
+              <div className="flex items-center gap-3 pt-4 border-t border-border">
+                <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-sm">
                   {t.initial}
                 </div>
                 <div>
-                  <div className="font-display font-semibold text-sm">{t.name}</div>
+                  <div className="font-display font-bold text-sm">{t.name}</div>
                   <div className="text-xs text-muted-foreground">{t.time}</div>
                 </div>
               </div>
