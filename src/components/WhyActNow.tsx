@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AlertTriangle } from "lucide-react";
+import cleanHome from "@/assets/clean-home.jpg";
 
 const dangers = [
   "Se reproducen hasta 400 crías por ciclo",
@@ -11,8 +12,7 @@ const dangers = [
 
 const WhyActNow = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 to-background" />
+    <section className="py-24 relative overflow-hidden bg-gradient-section-alt">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ const WhyActNow = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="flex items-start gap-3 bg-gradient-card border border-border rounded-xl p-4 hover:border-destructive/30 transition-colors"
+                className="flex items-start gap-3 bg-card border border-border rounded-xl p-4 shadow-card hover:border-destructive/30 transition-colors"
               >
                 <AlertTriangle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-foreground">{danger}</span>
@@ -53,21 +53,28 @@ const WhyActNow = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="space-y-6"
           >
-            <div className="bg-gradient-card border border-border rounded-2xl p-10 text-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-destructive/5" />
-              <div className="relative z-10">
-                <div className="text-6xl mb-4">🪳 🐀 🐜</div>
-                <div className="font-display text-5xl font-bold text-accent mb-2">72%</div>
-                <p className="text-muted-foreground text-lg">
-                  de hogares en zonas urbanas han sufrido alguna plaga
-                </p>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-soft border border-border">
+              <img
+                src={cleanHome}
+                alt="Hogar protegido en Murcia"
+                className="w-full h-56 object-cover img-cinematic"
+                loading="lazy"
+                width={1024}
+                height={1024}
+              />
+            </div>
+            <div className="bg-card border border-border rounded-2xl p-8 text-center shadow-card">
+              <div className="text-5xl mb-3">🪳 🐀 🐜</div>
+              <div className="font-display text-5xl font-bold text-gradient-primary mb-2">72%</div>
+              <p className="text-muted-foreground text-lg">
+                de hogares en zonas urbanas han sufrido alguna plaga
+              </p>
             </div>
           </motion.div>
         </div>

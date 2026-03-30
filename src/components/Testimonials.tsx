@@ -68,16 +68,16 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="bg-gradient-card border border-border rounded-2xl p-6 hover:border-primary/20 transition-colors"
+              className="bg-card border border-border rounded-2xl p-6 shadow-card hover:border-primary/20 hover:shadow-glow transition-all"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-accent text-accent" />
+                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
                 ))}
               </div>
               <p className="text-foreground leading-relaxed mb-6 text-sm">"{t.text}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-display font-bold text-primary text-sm">
+                <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center font-display font-bold text-primary text-sm">
                   {t.initial}
                 </div>
                 <div>

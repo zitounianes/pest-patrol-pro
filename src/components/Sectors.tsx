@@ -13,8 +13,7 @@ const sectors = [
 
 const Sectors = () => {
   return (
-    <section id="servicios" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/20" />
+    <section id="servicios" className="py-24 relative bg-gradient-section-alt">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -40,7 +39,7 @@ const Sectors = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-gradient-card border border-border rounded-xl p-6 text-center hover:border-primary/30 hover:shadow-glow transition-all duration-300 cursor-default"
+              className="bg-card border border-border rounded-xl p-6 text-center shadow-card hover:border-primary/30 hover:shadow-glow transition-all duration-300 cursor-default"
             >
               <div className="text-3xl mb-3">{sector.emoji}</div>
               <h3 className="font-display font-semibold text-sm mb-1">{sector.title}</h3>

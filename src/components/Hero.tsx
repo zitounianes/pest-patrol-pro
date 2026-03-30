@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, ArrowRight } from "lucide-react";
+import heroImg from "@/assets/hero-pest-control.jpg";
 
 const stats = [
   { value: "500+", label: "Intervenciones" },
@@ -11,13 +12,21 @@ const stats = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/30" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      {/* Hero background image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImg}
+          alt="Profesional de control de plagas inspeccionando un hogar"
+          className="w-full h-full object-cover img-cinematic"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+      </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10 pt-32 pb-20">
-        <div className="max-w-4xl">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +73,7 @@ const Hero = () => {
             </a>
             <a
               href="#servicios"
-              className="inline-flex items-center justify-center gap-2 border border-border text-foreground px-8 py-4 rounded-lg font-display font-medium text-lg hover:border-primary/40 hover:bg-primary/5 transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-border bg-card/80 text-foreground px-8 py-4 rounded-lg font-display font-medium text-lg hover:border-primary/40 hover:bg-primary/5 transition-all backdrop-blur-sm"
             >
               Explorar servicios
               <ArrowRight className="w-5 h-5" />
@@ -82,7 +91,7 @@ const Hero = () => {
           {stats.map((stat, i) => (
             <div
               key={i}
-              className="bg-gradient-card border border-border rounded-xl p-6 text-center hover:border-glow transition-colors"
+              className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6 text-center hover:border-primary/30 hover:shadow-soft transition-all"
             >
               <div className="font-display text-3xl md:text-4xl font-bold text-gradient-primary mb-1">
                 {stat.value}
