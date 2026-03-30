@@ -25,7 +25,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass border-b border-glow" : "bg-transparent"
+        scrolled ? "glass border-b border-border shadow-soft" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
@@ -55,7 +55,7 @@ const Navbar = () => {
             ))}
             <a
               href="#reservar"
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-all"
+              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-all shadow-glow"
             >
               Reservar Ahora
             </a>
@@ -76,7 +76,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-glow"
+            className="md:hidden glass border-t border-border"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (

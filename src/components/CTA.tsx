@@ -3,9 +3,8 @@ import { Shield } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section id="contacto" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px]" />
+    <section id="contacto" className="py-24 relative overflow-hidden bg-gradient-section-alt">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div

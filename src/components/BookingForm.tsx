@@ -15,8 +15,7 @@ const BookingForm = () => {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section id="reservar" className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/20" />
+    <section id="reservar" className="py-24 relative bg-gradient-section-alt">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +31,7 @@ const BookingForm = () => {
             Tu tranquilidad comienza aquí. Proceso rápido y sencillo.
           </p>
 
-          <div className="bg-gradient-card border border-border rounded-2xl p-8">
+          <div className="bg-card border border-border rounded-2xl p-8 shadow-card">
             <p className="font-display font-semibold mb-6 text-lg">¿Qué plaga tienes?</p>
             <div className="grid grid-cols-3 gap-3 mb-8">
               {pestTypes.map((pest) => (
@@ -42,7 +41,7 @@ const BookingForm = () => {
                   className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all duration-200 ${
                     selected === pest.label
                       ? "border-primary bg-primary/10 shadow-glow"
-                      : "border-border hover:border-primary/30"
+                      : "border-border hover:border-primary/30 bg-card"
                   }`}
                 >
                   <span className="text-2xl">{pest.emoji}</span>
