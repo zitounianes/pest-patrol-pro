@@ -26,48 +26,50 @@ const articles = [
 
 const Articles = () => {
   return (
-    <section id="articulos" className="py-24 relative">
+    <section id="articulos" className="py-28 relative">
       <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Artículos y Consejos</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Guías útiles sobre <span className="text-gradient-primary">prevención</span>
+          <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Blog</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-4">
+            Guías sobre <span className="text-gradient-primary italic">prevención</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Mantente informado sobre cómo proteger tu hogar.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {articles.map((article, i) => (
-            <motion.div
+            <motion.article
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group bg-gradient-card border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-glow transition-all duration-300 cursor-pointer"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: i * 0.1 }}
+              className="group bg-card border border-border rounded-3xl overflow-hidden shadow-card hover:shadow-cinematic hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-3xl">{article.emoji}</span>
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+              {/* Color bar */}
+              <div className="h-2 bg-primary" />
+              <div className="p-7">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-4xl">{article.emoji}</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
                     {article.tag}
                   </span>
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2 group-hover:text-primary transition-colors">
+                <h3 className="font-display font-bold text-lg mb-3 group-hover:text-primary transition-colors leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{article.desc}</p>
-                <p className="text-xs text-muted-foreground">{article.date}</p>
+                <p className="text-xs text-muted-foreground font-medium">{article.date}</p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

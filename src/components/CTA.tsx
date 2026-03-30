@@ -3,26 +3,31 @@ import { Shield } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section id="contacto" className="py-24 relative overflow-hidden bg-gradient-section-alt">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]" />
+    <section id="contacto" className="py-28 relative overflow-hidden bg-primary">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[hsl(0,0%,100%)] blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-[hsl(0,0%,100%)] blur-[120px]" />
+      </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
-            ¿Listo para eliminar <span className="text-gradient-primary">el problema</span>?
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-primary-foreground">
+            ¿Listo para eliminar
+            <br />
+            <span className="italic">el problema?</span>
           </h2>
-          <p className="text-muted-foreground text-lg mb-10">
-            No dejes que una infestación se convierta en una crisis. Recupera la tranquilidad de tu espacio hoy mismo.
+          <p className="text-primary-foreground/80 text-lg mb-10 max-w-lg mx-auto">
+            No dejes que una infestación se convierta en una crisis. Recupera la tranquilidad hoy mismo.
           </p>
           <a
             href="#reservar"
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-5 rounded-lg font-display font-bold text-xl shadow-glow-strong hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-3 bg-primary-foreground text-primary px-10 py-5 rounded-full font-display font-bold text-xl hover:scale-[1.03] transition-transform duration-200 shadow-cinematic"
           >
             <Shield className="w-6 h-6" />
             Solicitar Intervención

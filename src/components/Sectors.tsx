@@ -13,36 +13,36 @@ const sectors = [
 
 const Sectors = () => {
   return (
-    <section id="servicios" className="py-24 relative bg-gradient-section-alt">
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <section id="servicios" className="py-28 relative">
+      <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-3">Nuestros Clientes</p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-            Soluciones para <span className="text-gradient-primary">cada sector</span>
+          <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Sectores</span>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-4">
+            Soluciones para <span className="text-gradient-primary italic">cada sector</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Tanto para hogares como para grandes industrias, adaptamos cada tratamiento.
+            Adaptamos cada tratamiento a las necesidades de tu espacio.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
           {sectors.map((sector, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="bg-card border border-border rounded-xl p-6 text-center shadow-card hover:border-primary/30 hover:shadow-glow transition-all duration-300 cursor-default"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="bg-card border border-border rounded-2xl p-6 text-center shadow-card hover:border-primary/30 hover:shadow-glow hover:-translate-y-1 transition-all duration-200 cursor-default"
             >
-              <div className="text-3xl mb-3">{sector.emoji}</div>
-              <h3 className="font-display font-semibold text-sm mb-1">{sector.title}</h3>
+              <div className="text-4xl mb-3">{sector.emoji}</div>
+              <h3 className="font-display font-bold text-sm mb-1">{sector.title}</h3>
               <p className="text-xs text-muted-foreground">{sector.desc}</p>
             </motion.div>
           ))}
