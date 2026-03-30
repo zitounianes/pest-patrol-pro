@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, MapPin } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Servicios", href: "#servicios" },
@@ -20,11 +19,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 hero-fade-in ${
         scrolled ? "nav-solid border-b border-border shadow-soft" : "bg-transparent"
       }`}
     >
@@ -37,22 +33,14 @@ const Navbar = () => {
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
+              <a key={link.href} href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium">
                 {link.label}
               </a>
             ))}
             <a href="tel:+34000000000" className="flex items-center gap-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span className="hidden lg:inline">+34 XXX XXX XXX</span>
             </a>
-            <a
-              href="#reservar"
-              className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all shadow-glow"
-            >
+            <a href="#reservar" className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all shadow-glow">
               Reservar Ahora
             </a>
           </nav>
@@ -63,28 +51,21 @@ const Navbar = () => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card border-t border-border"
-          >
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-foreground text-lg font-medium">
-                  {link.label}
-                </a>
-              ))}
-              <a href="#reservar" onClick={() => setMobileOpen(false)} className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-center font-semibold">
-                Reservar Ahora
+      {mobileOpen && (
+        <div className="md:hidden bg-card border-t border-border">
+          <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-foreground text-lg font-medium">
+                {link.label}
               </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            ))}
+            <a href="#reservar" onClick={() => setMobileOpen(false)} className="bg-primary text-primary-foreground px-5 py-3 rounded-full text-center font-semibold">
+              Reservar Ahora
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
   );
 };
 

@@ -12,52 +12,34 @@ const Footer = () => {
             <h3 className="font-display text-2xl font-bold mb-4 text-background">
               <span className="text-primary">M</span> MONTCARRE
             </h3>
-            <p className="text-sm leading-relaxed text-background/60">
+            <p className="text-sm leading-relaxed text-background/50">
               Control de plagas profesional en Murcia. Más de 10 años protegiendo hogares y negocios.
             </p>
           </div>
-
           <div>
             <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Servicios</h4>
             <ul className="space-y-2.5">
-              {services.map((s) => (
-                <li key={s} className="text-sm text-background/50 hover:text-primary transition-colors cursor-pointer">{s}</li>
-              ))}
+              {services.map((s) => (<li key={s} className="text-sm text-background/40 hover:text-primary transition-colors cursor-pointer">{s}</li>))}
             </ul>
           </div>
-
           <div>
             <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Plagas</h4>
             <ul className="space-y-2.5">
-              {pests.map((p) => (
-                <li key={p} className="text-sm text-background/50 hover:text-primary transition-colors cursor-pointer">{p}</li>
-              ))}
+              {pests.map((p) => (<li key={p} className="text-sm text-background/40 hover:text-primary transition-colors cursor-pointer">{p}</li>))}
             </ul>
           </div>
-
           <div>
             <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Contacto</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-sm text-background/50">
-                <Phone className="w-4 h-4 text-primary shrink-0" /> +34 XXX XXX XXX
-              </li>
-              <li className="flex items-center gap-3 text-sm text-background/50">
-                <Mail className="w-4 h-4 text-primary shrink-0" /> info@montcarre.es
-              </li>
-              <li className="flex items-center gap-3 text-sm text-background/50">
-                <MapPin className="w-4 h-4 text-primary shrink-0" /> Murcia, España
-              </li>
-              <li className="flex items-center gap-3 text-sm text-background/50">
-                <Clock className="w-4 h-4 text-primary shrink-0" /> 24/7 — Todos los días
-              </li>
+              <li className="flex items-center gap-3 text-sm text-background/40"><Phone className="w-4 h-4 text-primary shrink-0" /> +34 XXX XXX XXX</li>
+              <li className="flex items-center gap-3 text-sm text-background/40"><Mail className="w-4 h-4 text-primary shrink-0" /> info@montcarre.es</li>
+              <li className="flex items-center gap-3 text-sm text-background/40"><MapPin className="w-4 h-4 text-primary shrink-0" /> Murcia, España</li>
+              <li className="flex items-center gap-3 text-sm text-background/40"><Clock className="w-4 h-4 text-primary shrink-0" /> 24/7 — Todos los días</li>
             </ul>
           </div>
         </div>
-
         <div className="border-t border-background/10 pt-8 text-center">
-          <p className="text-xs text-background/40">
-            © 2026 MONTCARRE Control de Plagas. Todos los derechos reservados.
-          </p>
+          <p className="text-xs text-background/30">© 2026 MONTCARRE Control de Plagas. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
