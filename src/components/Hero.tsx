@@ -1,11 +1,11 @@
 import { Shield, ArrowDown, CheckCircle2 } from "lucide-react";
-import heroVilla from "@/assets/hero-villa.jpg";
+import heroPestSpray from "@/assets/hero-pest-spray.jpg";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroVilla} alt="Villa mediterránea protegida en Murcia" className="w-full h-full object-cover img-cinematic" width={1920} height={1080} />
+        <img src={heroPestSpray} alt="Técnico profesional de control de plagas tratando una cocina" className="w-full h-full object-cover img-cinematic" width={1920} height={1080} />
         <div className="absolute inset-0 overlay-hero" />
       </div>
 
@@ -48,9 +48,9 @@ const Hero = () => {
 
         <div className="hero-fade-in hero-fade-in-delay-5 mt-16 flex flex-wrap gap-8 md:gap-16">
           {[
-            { value: "500+", label: "Intervenciones exitosas" },
-            { value: "98%", label: "Clientes satisfechos" },
-            { value: "10+", label: "Años de experiencia" },
+            { value: "24/7", label: "Disponibilidad total" },
+            { value: "<60", label: "Minutos de respuesta" },
+            { value: "100%", label: "Garantía de resultado" },
           ].map((stat, i) => (
             <div key={i} className="text-left">
               <div className="font-display text-4xl md:text-5xl font-black text-primary">{stat.value}</div>

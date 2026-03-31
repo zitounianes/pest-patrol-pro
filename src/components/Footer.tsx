@@ -1,7 +1,23 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const services = ["Desinsectación", "Desratización", "Desinfección", "Fumigación", "Tratamiento madera", "Control de aves"];
-const pests = ["Cucarachas", "Roedores", "Hormigas", "Termitas", "Mosquitos", "Chinches"];
+const services = [
+  { name: "Desinsectación", slug: "desinsectacion" },
+  { name: "Desratización", slug: "desratizacion" },
+  { name: "Desinfección", slug: "desinfeccion" },
+  { name: "Fumigación", slug: "fumigacion" },
+  { name: "Tratamiento madera", slug: "tratamiento-madera" },
+  { name: "Control de aves", slug: "control-de-aves" },
+];
+
+const pests = [
+  { name: "Cucarachas", slug: "cucarachas" },
+  { name: "Roedores", slug: "roedores" },
+  { name: "Hormigas", slug: "hormigas" },
+  { name: "Termitas", slug: "termitas" },
+  { name: "Mosquitos", slug: "mosquitos" },
+  { name: "Chinches", slug: "chinches" },
+];
 
 const Footer = () => {
   return (
@@ -19,13 +35,21 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Servicios</h4>
             <ul className="space-y-2.5">
-              {services.map((s) => (<li key={s} className="text-sm text-background/40 hover:text-primary transition-colors cursor-pointer">{s}</li>))}
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link to={`/servicios/${s.slug}`} className="text-sm text-background/40 hover:text-primary transition-colors">{s.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Plagas</h4>
             <ul className="space-y-2.5">
-              {pests.map((p) => (<li key={p} className="text-sm text-background/40 hover:text-primary transition-colors cursor-pointer">{p}</li>))}
+              {pests.map((p) => (
+                <li key={p.slug}>
+                  <Link to={`/plagas/${p.slug}`} className="text-sm text-background/40 hover:text-primary transition-colors">{p.name}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>

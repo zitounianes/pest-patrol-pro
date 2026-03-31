@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, Shield, CheckCircle2 } from "lucide-react";
+import { Phone, MessageCircle, CheckCircle2 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
 const pestTypes = [
@@ -11,9 +11,16 @@ const pestTypes = [
   { emoji: "🔬", label: "Otros" },
 ];
 
+const PHONE_NUMBER = "+34000000000";
+const WHATSAPP_NUMBER = "34000000000";
+
 const BookingForm = () => {
   const [selected, setSelected] = useState<string | null>(null);
   const ref = useReveal();
+
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    `Hola MONTCARRE, necesito ayuda con: ${selected || "plagas"}. Me gustaría reservar una cita.`
+  )}`;
 
   return (
     <section id="reservar" className="py-28 relative bg-muted/50" ref={ref}>
@@ -25,7 +32,7 @@ const BookingForm = () => {
               Tu tranquilidad<br /><span className="text-gradient-primary italic">comienza aquí.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Proceso rápido y sencillo. Selecciona el tipo de plaga y te contactamos en menos de 30 minutos.
+              Elige el tipo de plaga y contacta con nosotros de la forma que prefieras.
             </p>
             <div className="space-y-3">
               {["Presupuesto gratuito", "Sin compromiso", "Respuesta inmediata"].map((text) => (
@@ -51,11 +58,19 @@ const BookingForm = () => {
                   </button>
                 ))}
               </div>
-              <button className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-body font-semibold text-base shadow-glow hover:shadow-glow-strong hover:brightness-110 transition-all disabled:opacity-40 disabled:cursor-not-allowed" disabled={!selected}>
-                <Shield className="w-5 h-5" />
-                Solicitar presupuesto
-                <ArrowRight className="w-5 h-5" />
-              </button>
+
+              <div className="space-y-3">
+                <a href={`tel:${PHONE_NUMBER}`}
+                  className="w-full inline-flex items-center justify-center gap-2 bg-destructive text-destructive-foreground px-8 py-4 rounded-full font-body font-semibold text-base hover:brightness-110 transition-all">
+                  <Phone className="w-5 h-5" />
+                  🚨 Urgencia — Llamar ahora
+                </a>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-body font-semibold text-base shadow-glow hover:shadow-glow-strong hover:brightness-110 transition-all">
+                  <MessageCircle className="w-5 h-5" />
+                  📅 Reservar cita por WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
