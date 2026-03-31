@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
 const testimonials = [
@@ -12,6 +13,17 @@ const testimonials = [
 
 const Testimonials = () => {
   const ref = useReveal();
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => setCurrent((p) => (p + 1) % testimonials.length), []);
+  const prev = useCallback(() => setCurrent((p) => (p - 1 + testimonials.length) % testimonials.length), []);
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  const t = testimonials[current];
 
   return (
     <section id="opiniones" className="py-28 relative bg-muted/50" ref={ref}>
@@ -24,27 +36,48 @@ const Testimonials = () => {
           <p className="text-muted-foreground text-lg">Más de 500 familias ya confían en MONTCARRE.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal reveal-delay-1">
-          {testimonials.map((t, i) => (
-            <div key={i} className="bg-card border border-border rounded-3xl p-7 shadow-card hover:shadow-cinematic transition-shadow duration-300 relative">
-              <Quote className="w-8 h-8 text-primary/10 absolute top-5 right-5" />
-              <div className="flex gap-0.5 mb-5">
+        <div className="max-w-2xl mx-auto reveal reveal-delay-1">
+          <div className="bg-card border border-border rounded-3xl p-10 shadow-cinematic relative min-h-[280px] flex flex-col justify-between">
+            <Quote className="w-10 h-10 text-primary/10 absolute top-6 right-6" />
+
+            <div>
+              <div className="flex gap-0.5 mb-6">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+                  <Star key={j} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
-              <p className="text-foreground leading-relaxed mb-6 text-[15px]">"{t.text}"</p>
-              <div className="flex items-center gap-3 pt-4 border-t border-border">
-                <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-sm">
+              <p className="text-foreground leading-relaxed text-lg mb-8">"{t.text}"</p>
+            </div>
+
+            <div className="flex items-center justify-between pt-6 border-t border-border">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-display font-bold text-primary-foreground text-base">
                   {t.initial}
                 </div>
                 <div>
-                  <div className="font-display font-bold text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.time}</div>
+                  <div className="font-display font-bold">{t.name}</div>
+                  <div className="text-sm text-muted-foreground">{t.time}</div>
                 </div>
               </div>
+
+              <div className="flex items-center gap-2">
+                <button onClick={prev} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary/40 transition-colors" aria-label="Anterior">
+                  <ChevronLeft className="w-5 h-5 text-muted-foreground" />
+                </button>
+                <button onClick={next} className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:border-primary/40 transition-colors" aria-label="Siguiente">
+                  <ChevronRight className="w-5 h-5 text-muted-foreground" />
+                </button>
+              </div>
             </div>
-          ))}
+          </div>
+
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, i) => (
+              <button key={i} onClick={() => setCurrent(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${i === current ? "bg-primary w-6" : "bg-border hover:bg-primary/30"}`}
+                aria-label={`Opinión ${i + 1}`} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { AlertTriangle, TrendingUp } from "lucide-react";
-import cleanKitchen from "@/assets/clean-kitchen.jpg";
+import cleanHomeInterior from "@/assets/clean-home-interior.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 
 const dangers = [
@@ -40,7 +40,7 @@ const WhyActNow = () => {
 
           <div className="space-y-6 reveal reveal-delay-2">
             <div className="rounded-3xl overflow-hidden shadow-cinematic">
-              <img src={cleanKitchen} alt="Cocina limpia y protegida" className="w-full h-64 object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+              <img src={cleanHomeInterior} alt="Hogar limpio y protegido" className="w-full h-64 object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
             </div>
             <div className="bg-card border border-border rounded-3xl p-8 text-center shadow-cinematic">
               <div className="flex items-center justify-center gap-3 mb-3">

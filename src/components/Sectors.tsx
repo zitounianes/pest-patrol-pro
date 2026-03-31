@@ -1,5 +1,5 @@
 import { useReveal } from "@/hooks/use-reveal";
-import equipment from "@/assets/equipment.jpg";
+import equipmentFlatlay from "@/assets/equipment-flatlay.jpg";
 
 const sectors = [
   { emoji: "🏠", title: "Particulares", desc: "Hogares y viviendas" },
@@ -38,7 +38,7 @@ const Sectors = () => {
           </div>
 
           <div className="reveal reveal-delay-2 rounded-3xl overflow-hidden shadow-cinematic">
-            <img src={equipment} alt="Equipamiento profesional de control de plagas" className="w-full h-[420px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+            <img src={equipmentFlatlay} alt="Equipamiento profesional de control de plagas" className="w-full h-[420px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
           </div>
         </div>
       </div>

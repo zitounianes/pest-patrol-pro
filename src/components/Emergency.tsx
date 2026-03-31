@@ -1,5 +1,5 @@
 import { Zap, MapPin, Phone } from "lucide-react";
-import serviceVan from "@/assets/service-van.jpg";
+import emergencyVan from "@/assets/emergency-van.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 
 const cities = ["Murcia", "Cartagena", "Lorca", "Molina", "Alcantarilla", "Torre-Pacheco", "San Javier", "Cieza"];
@@ -11,7 +11,7 @@ const Emergency = () => {
     <section className="py-0 relative overflow-hidden" ref={ref}>
       <div className="relative min-h-[550px] flex items-center">
         <div className="absolute inset-0">
-          <img src={serviceVan} alt="Servicio de emergencia MONTCARRE" className="w-full h-full object-cover" loading="lazy" width={1024} height={1024} />
+          <img src={emergencyVan} alt="Servicio de emergencia MONTCARRE" className="w-full h-full object-cover" loading="lazy" width={1024} height={576} />
           <div className="absolute inset-0 overlay-dark" />
         </div>
 
@@ -33,13 +33,12 @@ const Emergency = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="#reservar" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-body font-semibold text-base shadow-glow-strong hover:brightness-110 transition-all">
-                <Zap className="w-5 h-5" />
-                Solicitar intervención urgente
-              </a>
-              <a href="tel:+34000000000" className="inline-flex items-center justify-center gap-2 border-2 border-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] px-8 py-4 rounded-full font-body font-medium text-base hover:border-primary/50 transition-colors">
+              <a href="tel:+34000000000" className="inline-flex items-center justify-center gap-2 bg-destructive text-destructive-foreground px-8 py-4 rounded-full font-body font-semibold text-base hover:brightness-110 transition-all">
                 <Phone className="w-5 h-5" />
-                Llamar ahora
+                🚨 Llamar — Urgencia
+              </a>
+              <a href={`https://wa.me/34000000000?text=${encodeURIComponent("Hola MONTCARRE, tengo una urgencia de plagas.")}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border-2 border-[hsl(0,0%,100%)]/20 text-[hsl(0,0%,100%)] px-8 py-4 rounded-full font-body font-medium text-base hover:border-primary/50 transition-colors">
+                📅 WhatsApp
               </a>
             </div>
 
