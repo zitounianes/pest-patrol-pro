@@ -41,47 +41,45 @@ const Testimonials = () => {
   const t = testimonials[current];
 
   return (
-    <section id="opiniones" className="py-24 relative bg-accent overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-4 md:px-8 max-w-3xl">
-        <div className="text-center mb-14 reveal">
-          <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Opiniones</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-accent-foreground">
+    <section id="opiniones" className="py-28 relative bg-accent overflow-hidden" ref={ref}>
+      <div className="container mx-auto px-4 md:px-8 max-w-4xl">
+        <div className="text-center mb-16 reveal">
+          <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Opiniones</span>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-accent-foreground">
             Lo que dicen nuestros clientes<span className="text-primary">.</span>
           </h2>
         </div>
 
         <div className="reveal reveal-delay-1 relative">
-          {/* Arrows */}
-          <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Anterior">
-            <ChevronLeft className="w-4 h-4 text-accent-foreground/70" />
+          <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-20 w-12 h-12 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Anterior">
+            <ChevronLeft className="w-5 h-5 text-accent-foreground/70" />
           </button>
-          <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Siguiente">
-            <ChevronRight className="w-4 h-4 text-accent-foreground/70" />
+          <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-20 w-12 h-12 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Siguiente">
+            <ChevronRight className="w-5 h-5 text-accent-foreground/70" />
           </button>
 
-          {/* Card */}
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-3xl">
             <div key={current} className={direction === "right" ? "slide-in-right" : "slide-in-left"}>
-              <div className="bg-[hsl(0,0%,100%,0.05)] border border-[hsl(0,0%,100%,0.08)] rounded-2xl p-8 md:p-12 text-center">
-                <Quote className="w-8 h-8 text-primary/50 mx-auto mb-6" />
+              <div className="bg-[hsl(0,0%,100%,0.05)] border border-[hsl(0,0%,100%,0.08)] rounded-3xl p-10 md:p-14 text-center">
+                <Quote className="w-10 h-10 text-primary/40 mx-auto mb-8" />
 
-                <div className="flex gap-1 justify-center mb-6">
+                <div className="flex gap-1.5 justify-center mb-8">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-[hsl(var(--warm))] text-[hsl(var(--warm))]" />
+                    <Star key={j} className="w-5 h-5 fill-[hsl(var(--warm))] text-[hsl(var(--warm))]" />
                   ))}
                 </div>
 
-                <blockquote className="font-display text-lg md:text-xl font-medium leading-relaxed text-accent-foreground/90 mb-8 max-w-xl mx-auto">
+                <blockquote className="font-display text-xl md:text-2xl font-medium leading-relaxed text-accent-foreground/90 mb-10 max-w-2xl mx-auto">
                   {t.text}
                 </blockquote>
 
-                <div className="flex items-center justify-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
-                    <span className="font-body font-semibold text-primary-foreground text-sm">{t.initial}</span>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span className="font-body font-semibold text-primary-foreground text-lg">{t.initial}</span>
                   </div>
                   <div className="text-left">
-                    <div className="font-body font-semibold text-sm text-accent-foreground">{t.name}</div>
-                    <div className="text-xs text-accent-foreground/40">{t.location} · {t.time}</div>
+                    <div className="font-body font-semibold text-base text-accent-foreground">{t.name}</div>
+                    <div className="text-sm text-accent-foreground/40">{t.location} · {t.time}</div>
                   </div>
                 </div>
               </div>
@@ -89,11 +87,10 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Dots */}
-        <div className="flex items-center justify-center gap-2 mt-8 reveal reveal-delay-2">
+        <div className="flex items-center justify-center gap-2.5 mt-10 reveal reveal-delay-2">
           {testimonials.map((_, i) => (
             <button key={i} onClick={() => slide(i, i > current ? "right" : "left")}
-              className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-primary" : "w-2 bg-accent-foreground/20 hover:bg-accent-foreground/30"}`}
+              className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "w-7 bg-primary" : "w-2.5 bg-accent-foreground/20 hover:bg-accent-foreground/30"}`}
               aria-label={`Opinión ${i + 1}`} />
           ))}
         </div>
