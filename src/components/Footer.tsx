@@ -17,6 +17,7 @@ const pests = [
   { name: "Termitas", slug: "termitas" },
   { name: "Mosquitos", slug: "mosquitos" },
   { name: "Chinches", slug: "chinches" },
+  { name: "Palomas", slug: "palomas" },
 ];
 
 const Footer = () => {

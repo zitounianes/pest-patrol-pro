@@ -1,9 +1,10 @@
 import { useReveal } from "@/hooks/use-reveal";
+import { Link } from "react-router-dom";
 
 const articles = [
-  { emoji: "🪳", tag: "Prevención", title: "Cómo prevenir una infestación de cucarachas en tu hogar", desc: "Descubre las medidas preventivas más eficaces para proteger tu hogar todo el año.", date: "Mar 2026" },
-  { emoji: "🐀", tag: "Guía", title: "Señales de una plaga de roedores", desc: "Identifica los signos de presencia de ratas y ratones a tiempo.", date: "Feb 2026" },
-  { emoji: "🪲", tag: "Información", title: "Termitas: el enemigo silencioso", desc: "Los daños que causan y cómo detectarlas antes de que sea tarde.", date: "Dic 2025" },
+  { emoji: "🪳", tag: "Prevención", title: "Cómo prevenir una infestación de cucarachas en tu hogar", desc: "Descubre las medidas preventivas más eficaces para proteger tu hogar todo el año.", date: "Mar 2026", link: "/plagas/cucarachas" },
+  { emoji: "🐀", tag: "Guía", title: "Señales de una plaga de roedores", desc: "Identifica los signos de presencia de ratas y ratones a tiempo.", date: "Feb 2026", link: "/plagas/roedores" },
+  { emoji: "🪲", tag: "Información", title: "Termitas: el enemigo silencioso", desc: "Los daños que causan y cómo detectarlas antes de que sea tarde.", date: "Dic 2025", link: "/plagas/termitas" },
 ];
 
 const Articles = () => {
@@ -22,7 +23,7 @@ const Articles = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto reveal reveal-delay-1">
           {articles.map((article, i) => (
-            <article key={i} className="group bg-card border border-border rounded-3xl overflow-hidden shadow-card hover:shadow-cinematic hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            <Link key={i} to={article.link} className="group bg-card border border-border rounded-3xl overflow-hidden shadow-card hover:shadow-cinematic hover:-translate-y-1 transition-all duration-300 block">
               <div className="h-1.5 bg-primary" />
               <div className="p-7">
                 <div className="flex items-center gap-3 mb-5">
@@ -33,7 +34,7 @@ const Articles = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{article.desc}</p>
                 <p className="text-xs text-muted-foreground font-medium">{article.date}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

@@ -3,9 +3,9 @@ import technicianInspecting from "@/assets/technician-inspecting.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 
 const pillars = [
-  { icon: Eye, title: "Protección Invisible", description: "Métodos discretos que actúan sin alterar tu día a día." },
-  { icon: Microscope, title: "Precisión Científica", description: "Diagnóstico exacto y erradicación desde el origen." },
-  { icon: ShieldCheck, title: "Seguridad Total", description: "Protocolos inofensivos para tu entorno y familia." },
+  { icon: Eye, title: "Intervención Estratégica", description: "Procedimientos de baja disrupción diseñados para preservar completamente la operatividad diaria de su hogar o empresa." },
+  { icon: Microscope, title: "Diagnosis Técnica Precisa", description: "Análisis exhaustivo de vectores y focos de anidación para aplicar la metodología de erradicación más eficiente." },
+  { icon: ShieldCheck, title: "Bioseguridad Certificada", description: "Implementación de protocolos regulados y biocidas de última generación, máxima eficacia sin riesgo para el entorno." },
 ];
 
 const Excellence = () => {
@@ -17,18 +17,18 @@ const Excellence = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <div className="relative order-2 lg:order-1 reveal">
             <div className="rounded-3xl overflow-hidden shadow-cinematic">
-              <img src={technicianInspecting} alt="Técnico profesional inspeccionando una vivienda" className="w-full h-[450px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+              <img src={technicianInspecting} alt="Técnico profesional realizando examen minucioso del entorno" className="w-full h-[450px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
             </div>
           </div>
 
           <div className="order-1 lg:order-2">
             <div className="mb-10 reveal reveal-delay-1">
-              <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Excelencia</span>
+              <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Excelencia y Rigor</span>
               <h2 className="font-display text-4xl md:text-5xl font-black mb-4">
-                Tu tranquilidad, <span className="text-gradient-primary italic">nuestra misión.</span>
+                Estándares de Calidad y <span className="text-gradient-primary italic">Eficacia Absoluta</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                No vendemos tratamientos temporales. Restauramos la seguridad de tu entorno con resultados definitivos.
+                Rechazamos las soluciones meramente paliativas. Ejecutamos protocolos de erradicación estructurados que garantizan el restablecimiento y la máxima seguridad sanitaria de sus espacios.
               </p>
             </div>
 
