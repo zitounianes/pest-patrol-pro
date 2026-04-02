@@ -17,54 +17,53 @@ const pests = [
   { name: "Termitas", slug: "termitas" },
   { name: "Mosquitos", slug: "mosquitos" },
   { name: "Chinches", slug: "chinches" },
-  { name: "Palomas", slug: "palomas" },
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-foreground text-background/80 py-20">
+    <footer className="bg-accent text-accent-foreground py-16">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid md:grid-cols-4 gap-10 mb-14">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="font-display text-2xl font-bold mb-4 text-background">
+            <h3 className="font-display text-xl font-bold mb-3 text-accent-foreground">
               <span className="text-primary">M</span> MONTCARRE
             </h3>
-            <p className="text-sm leading-relaxed text-background/50">
-              Control de plagas profesional en Murcia. Más de 10 años protegiendo hogares y negocios.
+            <p className="text-sm leading-relaxed text-accent-foreground/40">
+              Control de plagas profesional en Murcia. Protegiendo hogares y negocios.
             </p>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Servicios</h4>
-            <ul className="space-y-2.5">
+            <h4 className="font-body font-semibold mb-4 text-accent-foreground/70 text-xs uppercase tracking-widest">Servicios</h4>
+            <ul className="space-y-2">
               {services.map((s) => (
                 <li key={s.slug}>
-                  <Link to={`/servicios/${s.slug}`} className="text-sm text-background/40 hover:text-primary transition-colors">{s.name}</Link>
+                  <Link to={`/servicios/${s.slug}`} className="text-sm text-accent-foreground/35 hover:text-primary transition-colors">{s.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Plagas</h4>
-            <ul className="space-y-2.5">
+            <h4 className="font-body font-semibold mb-4 text-accent-foreground/70 text-xs uppercase tracking-widest">Plagas</h4>
+            <ul className="space-y-2">
               {pests.map((p) => (
                 <li key={p.slug}>
-                  <Link to={`/plagas/${p.slug}`} className="text-sm text-background/40 hover:text-primary transition-colors">{p.name}</Link>
+                  <Link to={`/plagas/${p.slug}`} className="text-sm text-accent-foreground/35 hover:text-primary transition-colors">{p.name}</Link>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold mb-5 text-background text-sm uppercase tracking-widest">Contacto</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-sm text-background/40"><Phone className="w-4 h-4 text-primary shrink-0" /> +34 XXX XXX XXX</li>
-              <li className="flex items-center gap-3 text-sm text-background/40"><Mail className="w-4 h-4 text-primary shrink-0" /> info@montcarre.es</li>
-              <li className="flex items-center gap-3 text-sm text-background/40"><MapPin className="w-4 h-4 text-primary shrink-0" /> Murcia, España</li>
-              <li className="flex items-center gap-3 text-sm text-background/40"><Clock className="w-4 h-4 text-primary shrink-0" /> 24/7 — Todos los días</li>
+            <h4 className="font-body font-semibold mb-4 text-accent-foreground/70 text-xs uppercase tracking-widest">Contacto</h4>
+            <ul className="space-y-2.5">
+              <li className="flex items-center gap-2.5 text-sm text-accent-foreground/35"><Phone className="w-3.5 h-3.5 text-primary shrink-0" /> +34 XXX XXX XXX</li>
+              <li className="flex items-center gap-2.5 text-sm text-accent-foreground/35"><Mail className="w-3.5 h-3.5 text-primary shrink-0" /> info@montcarre.es</li>
+              <li className="flex items-center gap-2.5 text-sm text-accent-foreground/35"><MapPin className="w-3.5 h-3.5 text-primary shrink-0" /> Murcia, España</li>
+              <li className="flex items-center gap-2.5 text-sm text-accent-foreground/35"><Clock className="w-3.5 h-3.5 text-primary shrink-0" /> 24/7</li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-background/10 pt-8 text-center">
-          <p className="text-xs text-background/30">© 2026 MONTCARRE Control de Plagas. Todos los derechos reservados.</p>
+        <div className="border-t border-accent-foreground/8 pt-6 text-center">
+          <p className="text-xs text-accent-foreground/25">© 2026 MONTCARRE. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
