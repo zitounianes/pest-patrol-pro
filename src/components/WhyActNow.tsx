@@ -1,55 +1,56 @@
 import { AlertTriangle, TrendingUp } from "lucide-react";
-import professionalService from "@/assets/professional-service.jpg";
 import { useReveal } from "@/hooks/use-reveal";
 
 const dangers = [
-  "Crecimiento Exponencial: Multiplicación drástica de la población en cuestión de semanas.",
-  "Riesgo Epidemiológico: Vectores de patógenos severos que comprometen la salud ambiental.",
-  "Pérdidas Materiales: Deterioro de infraestructuras, cableado y contaminación de bienes.",
-  "Ineficacia No Profesional: Soluciones domésticas que solo dispersan la plaga sin erradicarla.",
-  "Agravamiento del Problema: La inacción prolongada requiere intervenciones mucho más invasivas.",
+  { title: "Crecimiento exponencial", desc: "Multiplicación drástica de la población en cuestión de semanas." },
+  { title: "Riesgo sanitario", desc: "Vectores de patógenos que comprometen la salud de tu entorno." },
+  { title: "Daños materiales", desc: "Deterioro de infraestructuras, cableado y contaminación de bienes." },
+  { title: "Soluciones ineficaces", desc: "Los remedios caseros solo dispersan la plaga sin erradicarla." },
 ];
 
 const WhyActNow = () => {
   const ref = useReveal();
 
   return (
-    <section className="py-28 relative" ref={ref}>
+    <section className="py-24 relative" ref={ref}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="text-center mb-20 reveal">
-          <span className="text-primary text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">Urgencia</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-4">
-            La vital importancia de una intervención <span className="text-gradient-primary italic">profesional</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ignorar la presencia de vectores no solo agrava exponencialmente la infestación, sino que compromete de forma severa la bioseguridad y salubridad del entorno.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          <div className="space-y-4 reveal reveal-delay-1">
-            {dangers.map((danger, i) => (
-              <div key={i} className="flex items-center gap-4 bg-card border border-border rounded-2xl p-5 shadow-card hover:border-destructive/20 transition-colors group">
-                <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center shrink-0">
-                  <AlertTriangle className="w-5 h-5 text-destructive" />
-                </div>
-                <span className="text-foreground font-medium">{danger}</span>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-5 gap-14 items-center">
+            {/* Left: Content */}
+            <div className="lg:col-span-3">
+              <div className="mb-10 reveal">
+                <span className="text-[hsl(var(--warm))] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Por qué actuar ahora</span>
+                <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold mb-4 leading-tight">
+                  Las plagas no esperan<span className="text-primary">.</span>
+                  <br />
+                  <span className="text-muted-foreground font-normal italic">Tú tampoco deberías.</span>
+                </h2>
               </div>
-            ))}
-          </div>
 
-          <div className="space-y-6 reveal reveal-delay-2">
-            <div className="rounded-3xl overflow-hidden shadow-cinematic">
-              <img src={professionalService} alt="Servicio profesional de control de plagas y diagnosis" className="w-full h-64 object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+              <div className="space-y-3 reveal reveal-delay-1">
+                {dangers.map((d, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl border border-border bg-card hover:border-destructive/20 transition-colors group">
+                    <div className="w-9 h-9 rounded-lg bg-destructive/8 flex items-center justify-center shrink-0 mt-0.5">
+                      <AlertTriangle className="w-4 h-4 text-destructive" />
+                    </div>
+                    <div>
+                      <h3 className="font-body font-semibold text-sm mb-0.5">{d.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{d.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="bg-card border border-border rounded-3xl p-8 text-center shadow-cinematic">
-              <div className="flex items-center justify-center gap-3 mb-3">
-                <TrendingUp className="w-8 h-8 text-destructive" />
-                <span className="font-display text-6xl font-black text-gradient-primary">72%</span>
+
+            {/* Right: Statistic card */}
+            <div className="lg:col-span-2 reveal reveal-delay-2">
+              <div className="bg-accent text-accent-foreground rounded-3xl p-10 text-center shadow-cinematic">
+                <TrendingUp className="w-8 h-8 text-[hsl(var(--warm))] mx-auto mb-4" />
+                <span className="font-display text-6xl md:text-7xl font-bold block mb-2">72%</span>
+                <p className="text-accent-foreground/60 text-sm leading-relaxed max-w-xs mx-auto">
+                  de las infestaciones críticas provienen de problemas iniciales que fueron subestimados.
+                </p>
               </div>
-              <p className="text-muted-foreground text-lg max-w-md mx-auto">
-                de las incidencias críticas provienen de infestaciones iniciales que fueron subestimadas o mal tratadas.
-              </p>
             </div>
           </div>
         </div>
