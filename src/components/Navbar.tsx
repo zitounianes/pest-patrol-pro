@@ -137,8 +137,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card border-t border-border shadow-cinematic">
-          <div className="container mx-auto px-4 py-6 flex flex-col gap-1">
+        <div className="lg:hidden bg-card/98 backdrop-blur-lg border-t border-border shadow-cinematic">
+          <div className="container mx-auto px-4 py-6 flex flex-col gap-1 max-h-[85vh] overflow-y-auto soft-scrollbar">
             {/* Mobile Servicios */}
             <button onClick={() => setMobileServiciosOpen(!mobileServiciosOpen)}
               className="flex items-center justify-between w-full text-foreground text-lg font-medium py-3 px-2 rounded-xl hover:bg-muted/50 transition-colors">

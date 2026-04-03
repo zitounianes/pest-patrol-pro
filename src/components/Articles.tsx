@@ -22,9 +22,9 @@ const Articles = () => {
           <p className="text-muted-foreground text-base">Mantente informado sobre cómo proteger tu hogar.</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto reveal reveal-delay-1">
+        <div className="flex md:grid md:grid-cols-3 gap-5 max-w-4xl mx-auto reveal reveal-delay-1 overflow-x-auto pb-8 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-auto md:px-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {articles.map((article, i) => (
-            <Link key={i} to={article.link} className="group bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-cinematic hover:-translate-y-0.5 transition-all duration-300 block">
+            <Link key={i} to={article.link} className="group bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-cinematic hover:-translate-y-0.5 transition-all duration-300 shrink-0 w-[85vw] sm:w-[340px] md:w-auto snap-center block">
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">{article.emoji}</span>

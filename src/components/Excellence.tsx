@@ -12,24 +12,24 @@ const Excellence = () => {
   const ref = useReveal();
 
   return (
-    <section className="py-24 relative bg-secondary/50" ref={ref}>
+    <section className="py-16 md:py-24 relative bg-secondary/50" ref={ref}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid lg:grid-cols-2 gap-14 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-14 items-center max-w-6xl mx-auto">
           <div className="relative order-2 lg:order-1 reveal">
             <div className="rounded-2xl overflow-hidden shadow-cinematic">
-              <img src={technicianInspecting} alt="Técnico profesional realizando inspección" className="w-full h-[400px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+              <img src={technicianInspecting} alt="Técnico profesional realizando inspección" className="w-full h-[320px] sm:h-[450px] lg:h-[500px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
             </div>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="mb-8 reveal reveal-delay-1">
+            <div className="mb-8 sm:mb-10 reveal reveal-delay-1 flex flex-col items-center text-center md:items-start md:text-left">
               <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Metodología</span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 leading-tight">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 leading-[1.2] md:leading-tight">
                 Estándares de calidad<span className="text-primary">.</span>
                 <br />
                 <span className="text-muted-foreground font-normal italic">Eficacia garantizada.</span>
               </h2>
-              <p className="text-muted-foreground text-base leading-relaxed">
+              <p className="text-muted-foreground text-[15px] sm:text-base leading-[1.6] md:leading-relaxed max-w-sm md:max-w-none">
                 Rechazamos soluciones paliativas. Ejecutamos protocolos de erradicación estructurados que garantizan la seguridad sanitaria de sus espacios.
               </p>
             </div>
