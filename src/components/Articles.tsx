@@ -73,11 +73,11 @@ const Articles = () => {
               </div>
 
               {/* Content */}
-              <div className="relative bg-[hsl(220,15%,10%)] border border-white/[0.06] border-t-0 rounded-b-2xl p-6 md:p-7">
-                <h3 className="font-display font-bold text-lg md:text-xl text-white group-hover:text-primary transition-colors duration-300 leading-snug mb-3">
+              <div className="relative bg-white border border-border/50 border-t-0 rounded-b-2xl p-6 md:p-7 shadow-[0_4px_20px_-6px_hsl(0,0%,0%,0.06)]">
+                <h3 className="font-display font-bold text-lg md:text-xl text-foreground group-hover:text-primary transition-colors duration-300 leading-snug mb-3">
                   {article.title}
                 </h3>
-                <p className="text-[13px] text-white/35 leading-relaxed mb-5">
+                <p className="text-[13px] text-muted-foreground leading-relaxed mb-5">
                   {article.desc}
                 </p>
                 <div className="flex items-center gap-2 text-primary/70 group-hover:text-primary text-xs font-semibold uppercase tracking-wider transition-colors duration-300">
