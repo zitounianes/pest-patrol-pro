@@ -52,10 +52,10 @@ const Articles = () => {
             <Link
               key={i}
               to={article.link}
-              className="group relative shrink-0 w-[82vw] sm:w-[340px] md:w-auto snap-center block rounded-2xl overflow-hidden"
+              className="group relative shrink-0 w-[82vw] sm:w-[340px] md:w-auto snap-center flex flex-col rounded-2xl overflow-hidden bg-white border border-border/50 shadow-[0_4px_20px_-6px_hsl(0,0%,0%,0.06)] hover:shadow-[0_8px_30px_-8px_hsl(152,40%,40%,0.15)] hover:border-primary/30 transition-all duration-400"
             >
-              {/* Image */}
-              <div className="relative h-56 md:h-60 overflow-hidden">
+              {/* Image - fixed height, no overlay */}
+              <div className="relative h-52 overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
@@ -64,23 +64,20 @@ const Articles = () => {
                   width={800}
                   height={512}
                 />
-                {/* Gradient overlay on image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
-                {/* Tag positioned on image */}
                 <span className="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-white bg-primary px-3 py-1.5 rounded-md shadow-sm">
                   {article.tag}
                 </span>
               </div>
 
-              {/* Content */}
-              <div className="relative bg-white border border-border/50 border-t-0 rounded-b-2xl p-6 md:p-7 shadow-[0_4px_20px_-6px_hsl(0,0%,0%,0.06)]">
+              {/* Content - flex-grow to equalize */}
+              <div className="flex flex-col flex-grow p-6 md:p-7">
                 <h3 className="font-display font-bold text-lg md:text-xl text-foreground group-hover:text-primary transition-colors duration-300 leading-snug mb-3">
                   {article.title}
                 </h3>
-                <p className="text-[13px] text-muted-foreground leading-relaxed mb-5">
+                <p className="text-[13px] text-muted-foreground leading-relaxed mb-5 flex-grow">
                   {article.desc}
                 </p>
-                <div className="flex items-center gap-2 text-primary/70 group-hover:text-primary text-xs font-semibold uppercase tracking-wider transition-colors duration-300">
+                <div className="flex items-center gap-2 text-primary/70 group-hover:text-primary text-xs font-semibold uppercase tracking-wider transition-colors duration-300 mt-auto">
                   <span>Leer más</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </div>
