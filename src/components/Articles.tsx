@@ -38,10 +38,10 @@ const Articles = () => {
         {/* Header */}
         <div className="text-center mb-16 reveal">
           <span className="text-primary/60 text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">Nuestro Blog</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-5 leading-[1.1] tracking-tight text-white">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-5 leading-[1.1] tracking-tight text-foreground">
             Guías de prevención<span className="text-primary">.</span>
           </h2>
-          <p className="text-white/40 text-sm md:text-base leading-relaxed max-w-lg mx-auto">
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed max-w-lg mx-auto">
             Artículos técnicos para proteger tu entorno de forma eficaz.
           </p>
         </div>
