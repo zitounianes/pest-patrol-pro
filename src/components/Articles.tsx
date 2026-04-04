@@ -65,7 +65,7 @@ const Articles = () => {
                   height={512}
                 />
                 {/* Gradient overlay on image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,15%,8%)] via-[hsl(220,15%,8%,0.4)] to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
                 {/* Tag positioned on image */}
                 <span className="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-white/90 bg-primary/80 px-3 py-1.5 rounded-md">
                   {article.tag}
