@@ -1,5 +1,5 @@
 import { Eye, Microscope, ShieldCheck } from "lucide-react";
-import technicianInspecting from "@/assets/technician-inspecting.jpg";
+import technicianInspecting from "@/assets/tech_montcarre.png";
 import { useReveal } from "@/hooks/use-reveal";
 
 const pillars = [
@@ -17,7 +17,14 @@ const Excellence = () => {
         <div className="grid lg:grid-cols-2 gap-10 md:gap-14 items-center max-w-6xl mx-auto">
           <div className="relative order-2 lg:order-1 reveal">
             <div className="rounded-2xl overflow-hidden shadow-cinematic">
-              <img src={technicianInspecting} alt="Técnico profesional realizando inspección" className="w-full h-[320px] sm:h-[450px] lg:h-[500px] object-cover img-cinematic" loading="lazy" width={1024} height={1024} />
+              <img 
+                src={technicianInspecting} 
+                alt="Técnico profesional realizando inspección" 
+                className="w-full h-[320px] sm:h-[450px] lg:h-[500px] object-cover object-bottom scale-[1.3] origin-bottom img-cinematic" 
+                loading="lazy" 
+                width={1024} 
+                height={1024} 
+              />
             </div>
           </div>
 

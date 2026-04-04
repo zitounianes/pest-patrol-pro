@@ -28,9 +28,9 @@ const Navbar = () => {
   const [mobilePlagasOpen, setMobilePlagasOpen] = useState(false);
   const location = useLocation();
 
-  // On subpages (not homepage), always use solid/dark-text style
+  // On subpages (not homepage), or when scrolled, or when opening mobile menu, use solid/dark-text style
   const isHome = location.pathname === "/";
-  const useDarkText = !isHome || scrolled;
+  const useDarkText = !isHome || scrolled || mobileOpen;
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 50);
@@ -123,7 +123,7 @@ const Navbar = () => {
             <a href="tel:+34000000000" className={`flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg transition-colors ${useDarkText ? "text-muted-foreground hover:text-primary" : "text-white/70 hover:text-white"}`}>
               <Phone className="w-4 h-4" />
             </a>
-            <a href="#reservar" className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all shadow-glow hover:shadow-glow-strong">
+            <a href="#reservar" className="bg-primary text-primary-foreground px-5 lg:px-6 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all shadow-glow hover:shadow-glow-strong whitespace-nowrap">
               Reservar Ahora
             </a>
           </nav>
@@ -137,7 +137,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-card/98 backdrop-blur-lg border-t border-border shadow-cinematic">
+        <div className="lg:hidden bg-card border-t border-border shadow-cinematic">
           <div className="container mx-auto px-4 py-6 flex flex-col gap-1 max-h-[85vh] overflow-y-auto soft-scrollbar">
             {/* Mobile Servicios */}
             <button onClick={() => setMobileServiciosOpen(!mobileServiciosOpen)}
