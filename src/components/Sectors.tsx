@@ -31,12 +31,12 @@ const Sectors = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-stretch">
           {/* Left: Sectors Grid */}
-          <div className="grid grid-cols-2 gap-4 md:gap-5 reveal reveal-delay-1 content-start">
+          <div className="grid grid-cols-2 gap-3 md:gap-4 reveal reveal-delay-1 content-start">
             {sectors.map((sector, i) => (
-              <div key={i} className="bg-card border border-border rounded-2xl p-5 md:p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-primary/25 transition-all duration-300 cursor-default flex flex-col items-center justify-center">
-                <div className="text-3xl md:text-4xl mb-3 drop-shadow-sm">{sector.emoji}</div>
-                <h3 className="font-body font-semibold text-sm md:text-base mb-1">{sector.title}</h3>
-                <p className="text-xs md:text-sm text-muted-foreground">{sector.desc}</p>
+              <div key={i} className="bg-card border border-border rounded-[1.25rem] p-4 md:p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-primary/25 transition-all duration-300 cursor-default flex flex-col items-center justify-center">
+                <div className="text-2xl md:text-3xl mb-2 drop-shadow-sm">{sector.emoji}</div>
+                <h3 className="font-body font-semibold text-[13px] md:text-sm mb-0.5">{sector.title}</h3>
+                <p className="text-[11px] md:text-xs text-muted-foreground">{sector.desc}</p>
               </div>
             ))}
           </div>
