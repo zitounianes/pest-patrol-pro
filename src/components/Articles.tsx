@@ -33,7 +33,7 @@ const Articles = () => {
   const ref = useReveal();
 
   return (
-    <section id="articulos" className="py-24 md:py-32 relative overflow-hidden bg-[hsl(220,15%,6%)]" ref={ref}>
+    <section id="articulos" className="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-[hsl(150,30%,96%)] via-[hsl(150,20%,94%)] to-[hsl(150,15%,97%)]" ref={ref}>
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-16 reveal">
