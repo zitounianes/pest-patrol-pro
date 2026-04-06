@@ -52,7 +52,7 @@ const BookingForm = () => {
               </div>
             </div>
 
-            <div className="reveal reveal-delay-1">
+            <div className="reveal reveal-delay-1 scroll-mt-28" id="contacto-directo">
               <div className="bg-[hsl(0,0%,100%,0.03)] backdrop-blur-xl border border-[hsl(0,0%,100%,0.1)] rounded-[1.5rem] md:rounded-[2rem] p-5 sm:p-8 md:p-10 shadow-cinematic h-full flex flex-col justify-center">
                 
                 <div className="text-center mb-8 md:mb-10">

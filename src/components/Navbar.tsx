@@ -118,7 +118,7 @@ const Navbar = () => {
             <a href="/#articulos" className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${linkClass}`}>
               Artículos
             </a>
-            <a href="/#contacto" className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${linkClass}`}>
+            <a href="/#contacto-directo" className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${linkClass}`}>
               Contacto
             </a>
 
@@ -186,7 +186,7 @@ const Navbar = () => {
             <a href="/#articulos" onClick={() => setMobileOpen(false)} className="text-foreground text-lg font-medium py-3 px-2 rounded-xl hover:bg-muted/50">
               Artículos
             </a>
-            <a href="/#contacto" onClick={() => setMobileOpen(false)} className="text-foreground text-lg font-medium py-3 px-2 rounded-xl hover:bg-muted/50">
+            <a href="/#contacto-directo" onClick={() => setMobileOpen(false)} className="text-foreground text-lg font-medium py-3 px-2 rounded-xl hover:bg-muted/50">
               Contacto
             </a>
             <div className="pt-3 border-t border-border mt-2">
