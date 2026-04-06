@@ -1,5 +1,5 @@
 import { Zap, MapPin, Phone } from "lucide-react";
-import emergencyVan from "@/assets/emergency-van.jpg";
+import emergencyVan from "@/assets/emergency-van.png";
 import { useReveal } from "@/hooks/use-reveal";
 
 const cities = ["Murcia", "Cartagena", "Lorca", "Molina", "Alcantarilla", "Torre-Pacheco", "San Javier", "Cieza"];
@@ -23,9 +23,9 @@ const Emergency = () => {
             </div>
 
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[hsl(0,0%,100%)] leading-tight">
-              Llegamos en menos de
+              Atención rápida para
               <br />
-              <span className="text-primary italic">60 minutos</span>
+              <span className="text-primary italic">su emergencia</span>
             </h2>
 
             <p className="text-[hsl(0,0%,100%,0.55)] text-base mb-8 max-w-md mx-auto">
@@ -33,12 +33,12 @@ const Emergency = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
-              <a href="tel:+34000000000" className="inline-flex items-center justify-center gap-2 bg-destructive text-destructive-foreground px-7 py-3.5 rounded-full font-body font-semibold text-sm hover:brightness-110 transition-all">
+              <a href="tel:+34643395654" className="inline-flex items-center justify-center gap-2 bg-destructive text-destructive-foreground px-7 py-3.5 rounded-full font-body font-semibold text-sm hover:brightness-110 transition-all">
                 <Phone className="w-4 h-4" />
-                Llamar — Urgencia
+                Llamar: +34 643 39 56 54
               </a>
-              <a href={`https://wa.me/34000000000?text=${encodeURIComponent("Hola MONTCARRE, tengo una urgencia de plagas.")}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[hsl(0,0%,100%,0.15)] text-[hsl(0,0%,100%,0.85)] px-7 py-3.5 rounded-full font-body font-medium text-sm hover:border-[hsl(0,0%,100%,0.3)] transition-colors">
-                WhatsApp
+              <a href={`https://wa.me/34643395654?text=${encodeURIComponent("Hola MONTCARRE, tengo una urgencia de plagas.")}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 border border-[hsl(0,0%,100%,0.15)] text-[hsl(0,0%,100%,0.85)] px-7 py-3.5 rounded-full font-body font-medium text-sm hover:border-[hsl(0,0%,100%,0.3)] transition-colors">
+                WhatsApp: +34 643 39 56 54
               </a>
             </div>
 

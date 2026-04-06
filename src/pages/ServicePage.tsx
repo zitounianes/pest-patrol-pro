@@ -158,10 +158,10 @@ const ServicePage = () => {
                 {service.description[0]}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+34000000000" className="inline-flex items-center justify-center gap-2 bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
+                <a href="tel:+34643395654" className="inline-flex items-center justify-center gap-2 bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
                   <Phone className="w-5 h-5" /> Llamada Directa
                 </a>
-                <a href={`https://wa.me/34000000000?text=${encodeURIComponent(`Hola, solicito consultoría técnica sobre el servicio maestro de ${service.title}.`)}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://wa.me/34643395654?text=${encodeURIComponent(`Hola, solicito consultoría técnica sobre el servicio maestro de ${service.title}.`)}`} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-body font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
                   <MessageCircle className="w-5 h-5" /> Acordar por WhatsApp
                 </a>

@@ -11,8 +11,8 @@ const pestTypes = [
   { emoji: "🔬", label: "Otros" },
 ];
 
-const PHONE_NUMBER = "+34000000000";
-const WHATSAPP_NUMBER = "34000000000";
+const PHONE_NUMBER = "+34643395654";
+const WHATSAPP_NUMBER = "34643395654";
 
 const BookingForm = () => {
   const [selected, setSelected] = useState<string | null>(null);
@@ -30,7 +30,7 @@ const BookingForm = () => {
           <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-primary/30 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-80 h-80 bg-[hsl(var(--warm))]/20 rounded-full blur-[100px] pointer-events-none" />
           
-          <div className="grid lg:grid-cols-2 gap-14 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 items-center relative z-10">
             <div className="reveal">
               <span className="text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4 block drop-shadow-sm">Reservar</span>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-[1.15]">
@@ -41,7 +41,7 @@ const BookingForm = () => {
                 Contacta directamente con nuestros especialistas de la forma que prefieras. Sin formularios largos ni esperas.
               </p>
               <div className="space-y-4">
-                {["Presupuesto gratuito", "Sin compromiso", "Respuesta en menos de 60 minutos"].map((text) => (
+                {["Presupuesto gratuito", "Sin compromiso", "Atención rápida y profesional"].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
@@ -71,13 +71,13 @@ const BookingForm = () => {
                     className="w-full relative group overflow-hidden inline-flex items-center justify-center gap-2 bg-[hsl(var(--destructive))] text-white px-4 py-3.5 md:px-6 md:py-4 rounded-full font-body font-bold text-[13px] md:text-[14px] shadow-lg hover:shadow-[0_0_20px_hsl(var(--destructive)/0.4)] transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">
                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                     <Phone className="w-4 h-4 relative z-10 shrink-0" />
-                    <span className="relative z-10">Urgencia — Llamar ahora</span>
+                    <span className="relative z-10">Llamar: {PHONE_NUMBER}</span>
                   </a>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
                     className="w-full relative group overflow-hidden inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-4 py-3.5 md:px-6 md:py-4 rounded-full font-body font-bold text-[13px] md:text-[14px] shadow-glow hover:shadow-glow-strong transition-all duration-300 transform hover:-translate-y-0.5 whitespace-nowrap">
                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                     <MessageCircle className="w-4 h-4 relative z-10 shrink-0" />
-                    <span className="relative z-10">Cita por WhatsApp</span>
+                    <span className="relative z-10">WhatsApp: +{WHATSAPP_NUMBER}</span>
                   </a>
                 </div>
               </div>

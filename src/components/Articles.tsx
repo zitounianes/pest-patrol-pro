@@ -47,12 +47,12 @@ const Articles = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex md:grid md:grid-cols-3 gap-5 max-w-5xl mx-auto reveal reveal-delay-1 overflow-x-auto pb-6 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-auto md:px-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex md:grid md:grid-cols-3 gap-4 md:gap-5 max-w-5xl mx-auto reveal reveal-delay-1 overflow-x-auto pb-6 pl-4 pr-4 -mx-4 md:mx-auto md:px-0 md:overflow-visible md:pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] after:content-[''] after:w-1 after:shrink-0 md:after:hidden">
           {articles.map((article, i) => (
             <Link
               key={i}
               to={article.link}
-              className="group relative shrink-0 w-[82vw] sm:w-[340px] md:w-auto snap-center flex flex-col rounded-2xl overflow-hidden bg-white border border-border/50 shadow-[0_4px_20px_-6px_hsl(0,0%,0%,0.06)] hover:shadow-[0_8px_30px_-8px_hsl(152,40%,40%,0.15)] hover:border-primary/30 transition-all duration-400"
+              className="group relative shrink-0 w-[85vw] sm:w-[340px] md:w-auto snap-start flex flex-col rounded-2xl overflow-hidden bg-white border border-border/50 shadow-[0_4px_20px_-6px_hsl(0,0%,0%,0.06)] hover:shadow-[0_8px_30px_-8px_hsl(152,40%,40%,0.15)] hover:border-primary/30 transition-all duration-400"
             >
               {/* Image - fixed height, no overlay */}
               <div className="relative h-52 overflow-hidden">

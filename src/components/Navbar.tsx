@@ -58,7 +58,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-2.5 group"
+          >
             <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-glow group-hover:shadow-glow-strong transition-shadow duration-200">
               <Shield className="w-5 h-5 text-primary-foreground" />
             </div>
@@ -120,8 +124,9 @@ const Navbar = () => {
 
             <div className={`w-px h-6 mx-2 ${useDarkText ? "bg-border" : "bg-white/15"}`} />
 
-            <a href="tel:+34000000000" className={`flex items-center gap-1.5 px-3 py-2 text-sm rounded-lg transition-colors ${useDarkText ? "text-muted-foreground hover:text-primary" : "text-white/70 hover:text-white"}`}>
+            <a href="tel:+34643395654" className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${useDarkText ? "text-muted-foreground hover:text-primary" : "text-white/70 hover:text-white"}`}>
               <Phone className="w-4 h-4" />
+              <span>+34 643 39 56 54</span>
             </a>
             <a href="#reservar" className="bg-primary text-primary-foreground px-5 lg:px-6 py-2.5 rounded-full text-sm font-semibold hover:brightness-110 transition-all shadow-glow hover:shadow-glow-strong whitespace-nowrap">
               Reservar Ahora

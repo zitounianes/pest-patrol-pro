@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
 
           {/* Heading - refined typography */}
-          <h1 className="hero-fade-in hero-fade-in-delay-1 font-display text-[2.4rem] sm:text-[3rem] lg:text-[3.7rem] font-bold leading-[1.1] sm:leading-[1.08] tracking-tight mb-6 text-[hsl(0,0%,100%)]">
+          <h1 className="hero-fade-in hero-fade-in-delay-1 font-display text-[2.4rem] sm:text-[2.8rem] md:text-[3.2rem] lg:text-[3.5rem] xl:text-[3.8rem] font-bold leading-[1.1] sm:leading-[1.08] tracking-tight mb-6 text-[hsl(0,0%,100%)]">
             Protegemos lo que
             <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>más valoras<span className="text-primary">.</span>
@@ -48,11 +48,11 @@ const Hero = () => {
               Solicitar presupuesto gratis
             </a>
             <a
-              href="tel:+34600000000"
+              href="tel:+34643395654"
               className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto border border-[hsl(0,0%,100%,0.15)] text-[hsl(0,0%,100%,0.85)] px-7 py-[14px] sm:py-3 rounded-full font-body font-medium text-[13px] hover:border-[hsl(0,0%,100%,0.3)] hover:text-[hsl(0,0%,100%)] transition-all duration-200"
             >
               <Phone className="w-[18px] h-[18px]" />
-              Llamar ahora
+              Llamar: +34 643 39 56 54
             </a>
           </div>
 
@@ -64,8 +64,8 @@ const Hero = () => {
             </div>
             <div className="w-px bg-[hsl(0,0%,100%,0.1)]" />
             <div>
-              <div className="font-display text-[1.6rem] md:text-[2rem] font-bold text-[hsl(0,0%,100%)]">&lt;60<span className="text-primary">'</span></div>
-              <div className="text-[10px] text-[hsl(0,0%,100%,0.4)] mt-1 uppercase tracking-widest">Respuesta</div>
+              <div className="font-display text-[1.4rem] md:text-[1.8rem] font-bold text-[hsl(0,0%,100%)]">Rápida<span className="text-primary"></span></div>
+              <div className="text-[10px] text-[hsl(0,0%,100%,0.4)] mt-1 uppercase tracking-widest">Atención</div>
             </div>
             <div className="w-px bg-[hsl(0,0%,100%,0.1)]" />
             <div>

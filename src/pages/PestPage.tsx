@@ -211,10 +211,10 @@ const PestPage = () => {
                 {pest.description[0]}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+34000000000" className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-destructive/20">
+                <a href="tel:+34643395654" className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-destructive/20">
                   <Phone className="w-5 h-5" /> Llamada Urgente
                 </a>
-                <a href={`https://wa.me/34000000000?text=${encodeURIComponent(`Hola, requiero ayuda inmediata con un problema técnico de ${pest.title}.`)}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://wa.me/34643395654?text=${encodeURIComponent(`Hola, requiero ayuda inmediata con un problema técnico de ${pest.title}.`)}`} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-card hover:bg-muted/80 border border-border text-foreground px-8 py-4 rounded-xl font-body font-semibold transition-all hover:scale-105 active:scale-95">
                   <MessageCircle className="w-5 h-5" /> Iniciar WhatsApp
                 </a>
