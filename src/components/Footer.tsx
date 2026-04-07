@@ -47,7 +47,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="pl-4 sm:pl-6 lg:pl-0">
             <h4 className="font-body font-semibold mb-4 text-accent-foreground/70 text-xs uppercase tracking-widest">Plagas</h4>
             <ul className="space-y-2">
               {pests.map((p) => (
