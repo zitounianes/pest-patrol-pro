@@ -4,112 +4,112 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const servicesData: Record<string, { title: string; image: string; description: string[]; details: string[] }> = {
-  desinsectacion: {
-    title: "Desinsectación Profesional",
-    image: "/expressive/desinsectacion.jpg",
-    description: [
-      "Nuestro servicio de desinsectación profesional está meticulosamente diseñado para devolverte la tranquilidad absoluta, garantizando un entorno permanentemente libre de insectos rastreros y voladores. Desplegamos poderosas estrategias y metodologías de choque avanzadas.",
-      "Comprendemos con rigor científico que cada infestación es tan única y evolutiva como el propio hábitat. Por tanto, nuestro equipo táctico ejecuta primero un rastreo milimétrico validando vulnerabilidades antes de la aplicación. Aseguramos higiene innegociable con mínima disrupción de olores.",
-      "En el núcleo de nuestra excelencia metodológica se halla el rechazo categórico hacia las pulverizaciones ciegas obsoletas. En su lugar, hemos perfeccionado el uso maestro de trampas ecográficas de captura secuencial, formulaciones microencapsuladas y atrayentes alimenticios específicos para cada cepa biológica. Estos compuestos activos (como Fipronil o Indoxacarb) presentan un espectacular 'efecto cascada' a nivel neural, logrando erradicaciones masivas sin generar resistencia molecular en la progenie invasora futura.",
-      "La bioseguridad es nuestra corona de laurel. Ejecutamos estos rigurosos protocolos biocidas respetando devotamente el bienestar inmediato de personas altamente sensibles, pacientes inmunosuprimidos y pequeños mamíferos domingueros. Elaboramos detalladas matrices de análisis de puntos críticos (APPCC) blindando de inmediato la sanidad inviolable de cocinas maestras, salones preescolares o laboratorios higiénicos mediante tratamientos sin 'plazo de seguridad', permitiéndote retomar la rutina productiva sin paradas letíficas."
-    ],
-    details: [
-      "Diagnóstico ambiental certificado desvelando focos primarios anidados",
-      "Aplicación focalizada de potentes geles enzimáticos de triple acción",
-      "Protocolos invisibles diseñados minuciosamente para evitar plazo de seguridad residual",
-      "Extirpación completa en toda la pirámide de especies domésticas e industriales",
-      "Biongeniería paralela para erigir escudos repelentes fronterizos de exclusión",
-      "Documentación técnica avalada administrativamente ante cualquier inspección Sanitaria",
-    ],
-  },
-  desratizacion: {
-    title: "Desratización Integral",
+  "rodent-control": {
+    title: "Professional Rodent Control",
     image: "/expressive/desratizacion.jpg",
     description: [
-      "Quebramos de cuajo y de forma implacable toda colonización de roedores introduciendo un sofisticadísimo cinturón de blindaje letal. Neutralizamos todo riesgo y colapso higiénico que imponen al núcleo vital, garantizando la seguridad extrema para individuos ajenos y nobles mascotas.",
-      "Nos negamos profundamente a vender remedios genéricos temporales. Combinamos minuciosamente tecnología de capturas vectoriales múltiples con bioseguridad perimetral. Transformamos tu frágil recinto en una estricta fortaleza técnica e infranqueable a oleadas venideras.",
-      "Basamos nuestro letal asedio en el estudio conductista etológico de los roedores murales y de alcantarillas. Comprendemos cómo se trazan sus 'autopistas de feromonas invisibles' a través de cámaras aislantes y cielo rasos oscuros. Diseñamos trampas de captura viva electromortal indetectable que envían pulsos telemétricos o instalamos portacebos perimetrales con cierres de seguridad patentados nivel titanio anti-fuerza mecánica. Esta matriz estratégica paraliza los corredores vitales del roedor obligándolo a un aislamiento estomacal letal.",
-      "Manejar raticidas exige un rigor forense inquebrantable. A diferencia de las temerarias prácticas caseras que derivan en envenenamientos catastróficos cruzados, nosotros nos regimos por directrices restrictivas de la Organización Mundial de la Salud (OMS). Nuestros raticidas cerosos de tercera generación no solo evitan que el animal desprenda lixiviados olorosos mortuorios post-mortem (efecto momificador instantáneo), sino que incorporan amargantes químicos (Bitrex) extremadamente reactivos al gusto humano y perruno salvando vidas accidentales y extirpando radicalmente al usurpador urbano."
+      "Our professional rodent control service is meticulously designed to restore your peace of mind, guaranteeing a permanently rodent-free environment using advanced strategies and cutting-edge methodologies.",
+      "We understand that every infestation is unique. Our tactical team first conducts a thorough perimeter survey, validating vulnerabilities before any application. We ensure uncompromising hygiene with minimal disruption.",
+      "We base our approach on the behavioural study of urban rodents. We design undetectable capture systems and install perimeter bait stations with safety-certified locks. This strategic matrix paralyses the rodent's vital corridors, forcing lethal isolation.",
+      "Handling rodenticides requires forensic rigour. Unlike reckless DIY practices, we follow strict World Health Organisation guidelines. Our third-generation wax rodenticides incorporate chemical bittering agents, saving accidental lives while eradicating the urban invader."
     ],
     details: [
-      "Monitorización forense pre-tratamiento dibujando los complejos corredores logísticos ciegos",
-      "Exclusión arquitectónica reforzada y sellado biométrico termoplástico de hendiduras críticas",
-      "Robustos cajones perimetrales fijados y anclados con patente de cierre y cebo parafinado",
-      "Telemetría continua garantizando intervenciones mecánicas de máxima humanidad",
-      "Cobertura logística Express ideal blindando fábricas críticas de matriz alimenticia o cárnica",
-      "Ultrapurificación química atmosférica e higienizante de superficie neutralizando las temidas feromonas de rastro",
+      "Pre-treatment forensic monitoring mapping complex blind logistical corridors",
+      "Reinforced architectural exclusion and biometric thermoplastic sealing of critical gaps",
+      "Robust perimeter bait boxes anchored with patented lock and paraffin bait",
+      "Continuous telemetry guaranteeing maximum humane mechanical interventions",
+      "Express logistical coverage ideal for critical food manufacturing or processing facilities",
+      "Atmospheric chemical purification neutralising feared trail pheromones",
     ],
   },
-  desinfeccion: {
-    title: "Desinfección Clínica Certificada",
-    image: "/expressive/desinfeccion.jpg",
+  "insect-control": {
+    title: "Professional Insect Control",
+    image: "/expressive/desinsectacion.jpg",
     description: [
-      "Proyectamos y garantizamos un campo de fuerza estéril microbiológicamente aniquilador de toda patología. Arrasamos superando sobradamente el 99.99% del índice de bacterias, agentes víricos encubiertos y tenaces cepas de moho, depurando pabellones hospitalarios o estancias corporativas críticas.",
-      "En tiempos post pandémicos, asegurar recubrimientos limpios dejó de ser simple cortesía. Utilizando desinfección aérea rotunda, inyectamos formulaciones biocidas amparadas por Sanidad volatilizadas al milímetro para revestir cualquier superficie volumétrica cóncava minimizando el riesgo vital de infecciones intrahospitalarias.",
-      "Imagina una tormenta seca, un micro-vórtice de pureza suspendido estáticamente en los aires. Abordamos la erradicación epidemiológica con sistemas espaciales de termonebulización y aspersión electrotstática colosal. Estas gotas biomagnéticas infinitesimales flotan ingrávidas atrayéndose ineludiblemente hacia toda superficie expuesta o recodo microscópico sombrío al poseer cargas eléctricas inversas, sepultando letalmente a patógenos letales como Norwalk, COVID virulento, Estafilococos multi-resistentes o la temible Clostridium difficile.",
-      "Esta purga atmosférica brutal no genera destilación ni condensación perjudicial sobre la electrónica extremadamente sensible o los tejidos rústicos dorados. Ofrecemos escudos fotocatalíticos oxidantes o peróxidos fríos disipables de base acuosa, que logran neutralizar las colonias miasmáticas disolviéndose sin dejar metales pesados volátiles. Al completarse el choque higiénico, procedemos al sellado analítico documentado expidiendo los folios de Trazabilidad Clínica requerida incondicionalmente por la Sanidad Pública Europea."
+      "Our professional insect control service is meticulously designed to restore absolute tranquillity, guaranteeing an environment permanently free of crawling and flying insects through advanced strategies.",
+      "We understand that each infestation is as unique as the habitat itself. Our tactical team first conducts a millimetric sweep validating vulnerabilities before application, ensuring uncompromising hygiene with minimal disruption.",
+      "At the core of our excellence is the categorical rejection of obsolete blind spraying. Instead, we use sequential capture traps, microencapsulated formulations and species-specific food attractants with a spectacular 'cascade effect'.",
+      "Biosecurity is our crown. We execute these rigorous biocide protocols while respecting the immediate wellbeing of sensitive individuals, immunosuppressed patients and domestic pets."
     ],
     details: [
-      "Saturación de espectro 3D por micro-nebulización nebulográfica asegurando penetración celular masiva",
-      "Destrucción relámpago contundente de mortíferas cadenas patógenas por contacto terminal",
-      "Rigurosos expedientes sanitarios incluyendo asaltos directos profilácticos anti Legionela en conductos hídricos",
-      "Shock higienizante colosal superando las peores tragedias por fallecimiento u horrorosos desbordes asépticos",
-      "Cero fitotoxicidad atmosférica residual aplicando soluciones oficialmente despachadas por ministerios nacionales",
-      "Estampación de aval técnico formal innegable, rubricando en libro tu certificación impecable y de confianza pública",
+      "Certified environmental diagnosis revealing primary nested hotspots",
+      "Focused application of powerful triple-action enzymatic gels",
+      "Invisible protocols designed to avoid residual safety intervals",
+      "Complete extraction across the entire pyramid of domestic and industrial species",
+      "Parallel bio-engineering to erect repellent border exclusion shields",
+      "Technical documentation endorsed administratively for any health inspection",
     ],
   },
-  fumigacion: {
-    title: "Fumigación a Nivel Industrial",
-    image: "/expressive/fumigacion.jpg",
+  "bed-bug-treatment": {
+    title: "Bed Bug Eradication",
+    image: "/expressive/chinches.jpg",
     description: [
-      "Operamos bajo presiones y demandas arquitectónicas inmensurables acometiendo inmensos operativos técnicos. Articulamos colosales lonas blindadas, burbujas de contención mediante gases presurizados e inertes con una demoledora capacidad infiltrante y sin margen de retroceso vital para patógenos.",
-      "Tratado operativamente como el 'remedio final e irreversible', este proceder es ordenado ante pesadillas logísticas inabarcables como el control aduanero en puertos comerciales, navieras de exportación y santuarios de acopio alimentario continental. Operaciones de alto factor restrictivo resueltas por ingenieros.",
-      "Nuestra doctrina abarca la orquestación química matemática rigurosa inyectando fosfamina (Fosfuro de aluminio) o potentes dióxidos condensados en entornos monumentales heréticamente sellados. Estos volátiles mortales atraviesan por su peso molecular liviano cada fisura del cemento, cada lámina porosa del cartón o cada pulgada de un container marítimo reventando los sacos respiratorios letales de gorgojos, isópteros recónditos o plagas cuarentenarias ocultas, asegurando una pureza cero-supervivientes demandada globalmente.",
-      "Este operativo, por naturaleza letal extremada, es regentado únicamente bajo la tutela estricta de una jerarquía de técnicos Nivel 3 portando escafandras autónomas de respiración ERA (Equipos de Respiración Autocontenida). Diseñamos anillos paramétricos de exclusión civil radiando lecturas telemétricas contiguas del gas infundido en PPM. La desorción controlada garantiza la volatilidad íntegra logrando reentregar un santuario inmenso y purificado para el comercio internacional bajo los estrictos convenios NIMF-15 aduaneros."
+      "Bed bugs embody pure nocturnal terror. They emerge attracted solely by the CO2 exhaled while you sleep, invading you in darkness. They infiltrate homes by clinging imperceptibly to luggage, clothing and deliveries.",
+      "They possess an armoured flat physiology that allows them to slip through cracks the thickness of a credit card, disappearing into electrical sockets, headboard fixtures and skirting boards. They can survive in a semi-dormant state for twelve months without feeding.",
+      "Eliminating bed bugs demands the pinnacle of methodology that firmly rejects any temporary commercial palliative. Given the high evolutionary covering of their cuticles against toxicological molecules, we embrace polyvalent extermination.",
+      "We project a thermal inferno with pressurised superheated clinical-grade steam, followed by meticulous siliceous diatomaceous fogs and deep residual sprays in invisible chambers, making survival absolutely impossible."
     ],
     details: [
-      "Dosis precisas matemáticas de gases halogenados mortales saturando las atmósferas y midiendo curvas logarítmicas",
-      "Purga exhaustiva aniquilando alimañas acartonadas en mastodónticas tolvas cerealísticas y cimientos logísticos pesados",
-      "Sofocación sistemática paralizante del latido respiratorio del escurridizo gorgojo del grano y la silófaga tenaz",
-      "Lecturas cronométricas telemáticas de evacuación asegurando la reposición cristalina al 100% molecular del dióxido natural",
-      "Rígidos códigos arancelarios obedecidos escrupulosamente al milímetro respecto al vital marco de transito global NIMF-15",
-      "Destacamentos Tácticos enfundados bajo corazas Nivel-3 respirando únicamente atmósferas encapsuladas (Unidades ERA)",
+      "Multi-phase thermal and chemical sweep protocol",
+      "Clinical-grade superheated steam treatment exceeding 140°C",
+      "Diatomaceous earth application in all harbourage points",
+      "Residual spray treatment in deep crevices and voids",
+      "Follow-up monitoring and prevention programme",
+      "100% reliability guarantee on complete eradication",
     ],
   },
-  "tratamiento-madera": {
-    title: "Preservación Vital e Histórica en Madera",
-    image: "/expressive/madera.jpg",
-    description: [
-      "Rescatamos de la consunción y la irremediable sepultura a patrimonios invalorables. Sentenciamos el vergonzoso y cobarde apetito estructural propiciado por legiones de isópteros silófagos (termitas) y devastadores carcomas silenciosos. Le inyectamos una longeva eternidad a todo tipo de carpintería noble existente.",
-      "Nos separamos de las superficiales barnicerías de bajo costo. Con tecnología de vanguardia y radar milimétrico, extirpamos la actividad destructora restituyendo el alma portante original. Salvemos las venas latientes de maderas maestras antiquísimas, o de tu amado parqué moderno recién expoliado.",
-      "El esqueleto vital portante o los retablos ornamentados centenarios esconden patologías que no admiten parches. Nuestros curadores aplican el prestigioso 'Método de Inyección Profunda Multiválvula'. Consiste en taladrar la fibra de tensión con brocas quirúrgicas insertando tacos presurizados donde maquinamos bombas de compresión disparando geles insecticidas-fungicidas letales a 150 bares de presión. Esta marea tóxica fluídica inunda hasta el último laberinto roído petrificando a los nefastos gusanos o larvas comedoras.",
-      "Complementariamente blindamos el perímetro inyectando potentes velos anti-retorno rodeando las vigas sustentantes que tocan muretes portantes. No conformes con sanar lo irreparable, fortificamos la oquedad destructiva rellenando cicatrices profundas con masillas epxo-resinadas restaurando matemáticamente la tensión mecánica perdida y salvando así tu patrimonio, tu familia y los majestuosos techos de la tragedia rotunda del desmoronamiento irreversible."
-    ],
-    details: [
-      "Mapeado tomográfico 3D acústico penetrante de las vigas localizando los infartos por vacío y grietas silófagas",
-      "Válvulas esqueléticas incrustadas disparando chorros altísima presión de veneno polimérico al tupido y blando duramen interno",
-      "Instalación soterrada de anillos concéntricos defensivos y perimetrales sembrados de poderosísimo cebo inhibidor hormonal",
-      "Impregnaciones protectoras espesas aplicadas saturando capilares cortando estrepitosamente la amenaza colonizadora micótica",
-      "Regeneradores epoxi vertidos consolidando asombrosamente astillas destrozadas salvándolas del quiebre cataclísmico inminente",
-      "El más firme y solemne pacto escrito multianual rubricando un insondable muro y resguardo blindando fiduciariamente tu inmueble",
-    ],
-  },
-  "control-de-aves": {
-    title: "Sistemas Disuasorios Integrales de Aves Urbanas",
+  "bird-proofing": {
+    title: "Bird Proofing & Deterrent Systems",
     image: "/expressive/aves.jpg",
     description: [
-      "Destronamos incruenta y educadamente a persistentes regimientos de asfixiantes palomas y estruendosas gaviotas invasivas reasentándolas en hábitats viables. Subsanamos los inaguantables desgastes sanitarios al amparo escrupuloso de toda ley conservacionista europea existente contra toda avifauna.",
-      "El corrosivo y calcáreo guano ornitológico engulle y despelleja revestimientos costosos y es el nicho perfecto de microscópicos patógenos pulmonares peligrosísimos (como Histoplasmosis). Re-conquistamos la paz acústica y dimensional de tus cubiertas y bellos rosetones sin lastimar al rebaño volante.",
-      "La obstinación biológica de las palomas en regresar a pernoctar a sus nidos de forja original rebasa los métodos obsoletos tradicionales. Nuestro frente táctico instaura un asedio disuasorio multi-vectorial vanguardista. Tensamos meticulosamente y al milímetro cortinas de mallas traslúcidas de nylon reforzado en polietileno UV, aislando colosales atrios o claraboyas cenitales desorientando irremediablemente la embestida aviar mientras protegemos escrupulosamente la estética purista de la monumental fachada arquitectónica europea.",
-      "Cuando las cornisas labradas se convierten en pestilentes atalayas asediadas, fusionamos ingeniería acústica y física de choque silenciosa. Instalamos certeros cables electrizados de micromperajes innocuos para saltos repelentes inobjetables, púas de base dúctil y robustos sistemas de disuasión magneto-estroboscópico. Finalmente asaltamos la insostenible herencia del guano ácido anquilosado, saneando agresivamente los bloques pétreos mediante biocidas fungicónicos erradicando definitivamente piojillos aéreos trágicamente perjudiciales incrustados."
+      "We humanely deter persistent flocks of pigeons and invasive gulls, resettling them in viable habitats while rectifying the unbearable sanitary damage, all in strict compliance with European conservation law.",
+      "The corrosive ornithological guano engulfs and strips costly finishes and is the perfect niche for dangerous microscopic pulmonary pathogens. We reconquer the acoustic and dimensional peace of your rooftops without harming the flying flock.",
+      "The biological obstinacy of pigeons in returning to their original nesting sites surpasses traditional methods. Our tactical front establishes a multi-vectorial deterrent siege, meticulously tensioning translucent reinforced polyethylene nylon mesh curtains.",
+      "When carved cornices become pestilent besieged watchtowers, we fuse acoustic engineering and silent shock physics. We install precise electrified micro-amperage cables, flexible-base spikes and robust magneto-stroboscopic deterrent systems."
     ],
     details: [
-      "Levantamiento fotogramétrico por dron de ultra-altitud modelando túneles de vuelo y cartografiando presiones de enjambre",
-      "Redes tensadas de mallas simétricas en nylon naval con resistencia al rayo UV encapsuladas asépticamente con acero",
-      "Agujas romas invisibles y rodillos pendulares instalables en alféizares preciosos o tejados históricos anulando de facto el posado",
-      "Perfiles sónico-estroboscópicos repelentes en alta o muy baja frecuencia y faros eólicos refractarios reubicando innegociablemente el nido dormidero",
-      "Meticulosa higienización, retirada biológicamente aséptica del lodo infectocontagioso rasqueteando y revitalizando cromo pátinas y alféizares",
-      "Pólizas blindadas y cíclicas de barrido exhaustivo en tejados con amplias huellas industriales para matrices de captación fotovoltaica sensible",
+      "Ultra-altitude drone photogrammetric survey modelling flight tunnels",
+      "Tensioned naval nylon mesh nets with UV ray resistance",
+      "Blunt invisible needles and pendular rollers installed on precious ledges",
+      "Sonic-stroboscopic repellent profiles at high or very low frequency",
+      "Meticulous sanitisation and biologically aseptic removal of infectious guano",
+      "Comprehensive roof sweep policies for photovoltaic panel protection",
+    ],
+  },
+  fumigation: {
+    title: "Industrial-Grade Fumigation",
+    image: "/expressive/fumigacion.jpg",
+    description: [
+      "We operate under immense architectural pressures, articulating colossal containment tarps and pressurised inert gas bubbles with devastating infiltrating capacity and zero margin of vital retreat for pathogens.",
+      "Treated operationally as the 'final and irreversible remedy', this procedure is ordered for unmanageable logistical nightmares such as customs control in commercial ports, export shipping and continental food storage facilities.",
+      "Our doctrine encompasses rigorous mathematical chemical orchestration injecting phosphine or powerful condensed dioxides in hermetically sealed monumental environments. These lethal volatiles traverse every crack in cement and every porous lamina of cardboard.",
+      "This operation, by its extreme lethal nature, is managed solely under the strict supervision of Level 3 technicians wearing autonomous breathing apparatus. We design parametric exclusion rings radiating contiguous telemetric readings."
+    ],
+    details: [
+      "Precise mathematical doses of lethal halogenated gases saturating atmospheres",
+      "Exhaustive purge annihilating pests in massive cereal silos and heavy logistical foundations",
+      "Systematic suffocation paralysing the respiratory rhythm of grain weevils",
+      "Chronometric telematic evacuation readings ensuring 100% molecular restoration",
+      "Strict customs codes scrupulously obeyed regarding ISPM-15 global transit framework",
+      "Tactical units clad in Level-3 armour breathing only encapsulated atmospheres",
+    ],
+  },
+  disinfection: {
+    title: "Certified Clinical Disinfection",
+    image: "/expressive/desinfeccion.jpg",
+    description: [
+      "We project and guarantee a microbiologically sterile force field that annihilates all pathology, surpassing 99.99% of bacteria, covert viral agents and tenacious mould strains.",
+      "In post-pandemic times, ensuring clean surfaces is no longer mere courtesy. Using powerful aerial disinfection, we inject biocide formulations approved by health authorities, volatilised to the millimetre.",
+      "We approach epidemiological eradication with spatial thermonebulisation and colossal electrostatic aspersion systems. These infinitesimal biomagnetic droplets float weightlessly, irremediably attracted to every exposed surface.",
+      "This brutal atmospheric purge generates no harmful distillation or condensation on extremely sensitive electronics. We offer photocatalytic oxidising shields or cold dissipable aqueous-base peroxides."
+    ],
+    details: [
+      "3D spectrum saturation by micro-nebulisation ensuring massive cellular penetration",
+      "Lightning-fast destruction of lethal pathogenic chains by terminal contact",
+      "Rigorous sanitary files including direct prophylactic assaults against Legionella",
+      "Hygienic shock surpassing the worst tragedies from aseptic overflows",
+      "Zero residual atmospheric phytotoxicity applying officially approved solutions",
+      "Formal undeniable technical endorsement stamping your impeccable certification",
     ],
   },
 };
@@ -124,8 +124,8 @@ const ServicePage = () => {
         <Navbar />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="font-display text-4xl font-black mb-4">Servicio no encontrado</h1>
-            <Link to="/" className="text-primary hover:underline">Volver al catálogo web</Link>
+            <h1 className="font-display text-4xl font-black mb-4">Service not found</h1>
+            <Link to="/" className="text-primary hover:underline">Back to home</Link>
           </div>
         </div>
         <Footer />
@@ -137,19 +137,18 @@ const ServicePage = () => {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden flex flex-col">
       <Navbar />
       
-      {/* MAGNIFICENT PREMIUM HERO SECTION */}
       <div className="pt-32 pb-16 relative">
         <div className="absolute top-0 right-0 w-[80%] md:w-[60%] h-[120%] bg-gradient-to-l from-primary/10 to-transparent -z-10 pointer-events-none" />
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
           <Link to="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-8 sm:mb-12 font-medium">
             <ArrowLeft className="w-4 h-4" />
-            Volver a inicio
+            Back to home
           </Link>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wider uppercase mb-6 border border-primary/20">
-                <Shield className="w-4 h-4" /> Excelencia Metodológica
+                <Shield className="w-4 h-4" /> Methodological Excellence
               </div>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-foreground leading-tight">
                 {service.title}
@@ -158,12 +157,12 @@ const ServicePage = () => {
                 {service.description[0]}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+34643395654" className="inline-flex items-center justify-center gap-2 bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
-                  <Phone className="w-5 h-5" /> Llamada Directa
+                <a href="tel:+442038758225" className="inline-flex items-center justify-center gap-2 bg-foreground text-background hover:bg-foreground/90 px-8 py-4 rounded-xl font-body font-bold transition-all hover:scale-105 active:scale-95 shadow-lg">
+                  <Phone className="w-5 h-5" /> Call Now
                 </a>
-                <a href={`https://wa.me/34643395654?text=${encodeURIComponent(`Hola, solicito consultoría técnica sobre el servicio maestro de ${service.title}.`)}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://wa.me/442038758225?text=${encodeURIComponent(`Hi, I'd like to enquire about your ${service.title} service.`)}`} target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-body font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
-                  <MessageCircle className="w-5 h-5" /> Acordar por WhatsApp
+                  <MessageCircle className="w-5 h-5" /> WhatsApp Us
                 </a>
               </div>
             </div>
@@ -184,14 +183,13 @@ const ServicePage = () => {
         </div>
       </div>
 
-      {/* LUXURIOUS CONTENT SECTION */}
       <div className="py-20 relative bg-muted/20 border-t border-border/50 flex-1">
         <div className="container mx-auto px-4 md:px-8 max-w-6xl">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
             
             <div className="lg:col-span-7 flex flex-col justify-center">
               <div className="prose prose-lg dark:prose-invert max-w-none">
-                <h2 className="font-display text-4xl font-bold mb-8 text-foreground tracking-tight">Dominio y Ejecución Profesional</h2>
+                <h2 className="font-display text-4xl font-bold mb-8 text-foreground tracking-tight">Professional Expertise & Execution</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed font-medium text-foreground/90">
                   {service.description[1]}
                 </p>
@@ -217,7 +215,7 @@ const ServicePage = () => {
             <div className="lg:col-span-5">
               <div className="bg-card border border-border rounded-[2rem] p-8 md:p-10 shadow-md hover:shadow-xl transition-all duration-500 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -mr-16 -mt-16 transition-colors group-hover:bg-primary/10" />
-                <h3 className="font-display text-2xl font-bold mb-8 border-b border-border/60 pb-4 relative z-10 text-foreground">Garantías Operativas</h3>
+                <h3 className="font-display text-2xl font-bold mb-8 border-b border-border/60 pb-4 relative z-10 text-foreground">Service Guarantees</h3>
                 <ul className="space-y-6 relative z-10">
                   {service.details.map((detail, i) => (
                     <li key={i} className="flex items-start gap-4">
