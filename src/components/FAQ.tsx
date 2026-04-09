@@ -3,12 +3,12 @@ import { Plus, Minus } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
 const faqs = [
-  { q: "¿Cuánto tarda el tratamiento?", a: "Depende del tipo de plaga y la superficie afectada. En general, una intervención estándar tarda entre 30 minutos y 2 horas." },
-  { q: "¿Es seguro para niños y mascotas?", a: "Absolutamente. Utilizamos productos homologados y protocolos certificados completamente seguros para su familia y mascotas." },
-  { q: "¿Ofrecen garantía?", a: "Sí, todos nuestros tratamientos incluyen garantía. Si la plaga reaparece, volvemos sin coste adicional." },
-  { q: "¿Qué zonas cubrís?", a: "Cubrimos toda la Región de Murcia: Murcia, Cartagena, Lorca, Molina, Alcantarilla, Torre-Pacheco, San Javier, Cieza y alrededores." },
-  { q: "¿Cuánto cuesta una intervención?", a: "El precio varía según el tipo de plaga y nivel de infestación. Ofrecemos presupuestos gratuitos y sin compromiso." },
-  { q: "¿Trabajáis fines de semana?", a: "Sí, estamos disponibles 24/7, incluyendo festivos." },
+  { q: "How long does the treatment take?", a: "It depends on the type of pest and the affected area. A standard intervention typically takes between 30 minutes and 2 hours." },
+  { q: "Is it safe for children and pets?", a: "Absolutely. We use approved products and certified protocols that are completely safe for your family and pets." },
+  { q: "Do you offer a guarantee?", a: "Yes, all our treatments include a guarantee. If the pest reappears, we return at no additional cost." },
+  { q: "What areas do you cover?", a: "We cover all of Greater London and surrounding areas including Fulham, Chelsea, Kensington, and beyond." },
+  { q: "How much does treatment cost?", a: "The price varies depending on the type of pest and level of infestation. We offer free, no-obligation quotes." },
+  { q: "Do you work weekends?", a: "Yes, we are available 24/7, including weekends and bank holidays." },
 ];
 
 const FAQ = () => {
@@ -21,7 +21,7 @@ const FAQ = () => {
         <div className="text-center mb-14 reveal">
           <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">FAQ</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold">
-            Preguntas frecuentes<span className="text-primary">.</span>
+            Frequently asked questions<span className="text-primary">.</span>
           </h2>
         </div>
 

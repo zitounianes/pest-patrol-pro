@@ -2,35 +2,33 @@ import { useReveal } from "@/hooks/use-reveal";
 import equipmentFlatlay from "@/assets/branded_equipment.png";
 
 const sectors = [
-  { emoji: "🏠", title: "Particulares", desc: "Hogares y viviendas" },
-  { emoji: "🏨", title: "Hoteles", desc: "Hostelería y turismo" },
-  { emoji: "🏪", title: "Comercios", desc: "Tiendas y restaurantes" },
-  { emoji: "🏢", title: "Oficinas", desc: "Espacios de trabajo" },
-  { emoji: "🏥", title: "Sanidad", desc: "Clínicas y centros" },
-  { emoji: "🎓", title: "Educación", desc: "Colegios y guarderías" },
-  { emoji: "🏛️", title: "Administración", desc: "Edificios públicos" },
-  { emoji: "🏘️", title: "Fincas", desc: "Gestores y comunidades" },
+  { emoji: "🏠", title: "Residential", desc: "Homes & flats" },
+  { emoji: "🏨", title: "Hotels", desc: "Hospitality & tourism" },
+  { emoji: "🏪", title: "Restaurants", desc: "Food & retail" },
+  { emoji: "🏢", title: "Offices", desc: "Workspaces" },
+  { emoji: "🏥", title: "Healthcare", desc: "Clinics & hospitals" },
+  { emoji: "🎓", title: "Education", desc: "Schools & nurseries" },
+  { emoji: "🏛️", title: "Public Sector", desc: "Government buildings" },
+  { emoji: "🏘️", title: "Property Mgmt", desc: "Landlords & agents" },
 ];
 
 const Sectors = () => {
   const ref = useReveal();
 
   return (
-    <section id="servicios" className="py-16 md:py-24 relative" ref={ref}>
+    <section id="services" className="py-16 md:py-24 relative" ref={ref}>
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        {/* Header */}
         <div className="mb-12 reveal flex flex-col items-center text-center md:items-start md:text-left">
-          <span className="text-[hsl(var(--warm))] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Sectores</span>
+          <span className="text-[hsl(var(--warm))] text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Sectors</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-3 leading-[1.2] md:leading-tight">
-            Soluciones para cada sector<span className="text-primary">.</span>
+            Solutions for every sector<span className="text-primary">.</span>
           </h2>
           <p className="text-muted-foreground text-sm md:text-base max-w-lg">
-            Adaptamos cada tratamiento a las necesidades específicas de tu espacio.
+            We tailor each treatment to the specific needs of your space.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 md:gap-14 items-stretch">
-          {/* Left: Sectors Grid */}
           <div className="grid grid-cols-2 gap-3 md:gap-4 reveal reveal-delay-1 content-start">
             {sectors.map((sector, i) => (
               <div key={i} className="bg-card border border-border rounded-[1.25rem] p-4 md:p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-1 hover:border-primary/25 transition-all duration-300 cursor-default flex flex-col items-center justify-center">
@@ -41,11 +39,10 @@ const Sectors = () => {
             ))}
           </div>
 
-          {/* Right: Large cinematic image */}
           <div className="relative rounded-3xl overflow-hidden shadow-cinematic reveal reveal-delay-2 hidden lg:block h-full min-h-[500px]">
             <img 
               src={equipmentFlatlay} 
-              alt="Equipamiento profesional de control de plagas" 
+              alt="Professional pest control equipment" 
               className="w-full h-full object-cover"
             />
           </div>

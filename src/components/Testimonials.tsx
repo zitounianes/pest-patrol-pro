@@ -3,12 +3,14 @@ import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
 
 const testimonials = [
-  { name: "Angela Lopez Sanchez", initial: "A", text: "Servicio impecable. Tenía una infestación de cucarachas y todo quedó limpio a la perfección. Muy profesionales, rápidos y eficaces.", time: "Hace 1 mes", location: "Murcia" },
-  { name: "Maria Angeles García", initial: "M", text: "Andrés fue increíblemente eficaz, rápido y amable. Era un sábado y llegaron inmediatamente. Resolvieron el problema al instante.", time: "Hace 2 meses", location: "Cartagena" },
-  { name: "Mardie Linares", initial: "M", text: "Tras probar muchos productos, contraté esta empresa. En tres semanas no quedaba ni una cucaracha. José fue muy eficaz.", time: "Hace 1 mes", location: "Lorca" },
-  { name: "Aga", initial: "A", text: "Lo había intentado todo sin éxito. Gracias a esta empresa, los insectos desaparecieron por completo. Los recomiendo 100%.", time: "Hace 2 meses", location: "Molina" },
-  { name: "CROSS 94", initial: "C", text: "Servicio muy profesional. 10 sobre 10. Reactividad, puntualidad, calidad y profesionalismo impecables.", time: "Local Guide", location: "Murcia" },
-  { name: "Kevin Montalvo", initial: "K", text: "Personal altamente cualificado y profesional. Muy puntual, educado y eficiente. Una empresa seria y de confianza.", time: "Local Guide", location: "Alcantarilla" },
+  { name: "Georgie Davies", initial: "G", text: "I had an excellent experience with Patrick from Environ. He was incredibly professional, kind, and genuinely trustworthy. His knowledge and expertise were obvious from the moment he arrived, and he handled the mice issue at my property perfectly.", time: "4 months ago", location: "London" },
+  { name: "Ami Awan", initial: "A", text: "Really impressed with the service. I called up for some advice and they were so helpful and reassuring. They explained everything clearly and didn't make me feel silly for asking questions. Someone came out straight away.", time: "2 months ago", location: "London" },
+  { name: "Alanna O'Brien", initial: "A", text: "I had a great experience from start to finish over the phone and in person. Keeley was extremely helpful and took the time to answer all my questions and made the process easy and stress free.", time: "2 months ago", location: "London" },
+  { name: "Jeneil Camron", initial: "J", text: "Really happy with my experience with Environ Pest Control. The proofing they did was impressive — we haven't seen any mice at all since, which is a huge result. Overall, a smooth, stress-free experience and definitely 5 stars.", time: "4 months ago", location: "London" },
+  { name: "Sandra", initial: "S", text: "I had a mice infestation and contacted Environ for help. I spoke with Natalie L, who was extremely helpful and professional. She took the time to listen to me. Her support made a stressful situation much easier to handle.", time: "5 months ago", location: "London" },
+  { name: "Aaron Zaken", initial: "A", text: "Environ Pest Control provided outstanding service from start to finish. We had a persistent rodent issue that other companies couldn't fully resolve, but their team quickly identified the entry points and implemented a thorough solution.", time: "8 months ago", location: "London" },
+  { name: "Samantha Carrizales", initial: "S", text: "I had Environ come out to rat proof my house. Since their visit, I haven't seen any signs of rats on my property! One of a kind service. They talked me through the whole process and gave me reassurance all the way through.", time: "1 year ago", location: "London" },
+  { name: "Saskia Manners", initial: "S", text: "They are, as ever, friendly and efficient. Explaining what they have done and where the traps are left. I am very happy with my four-season package, knowing that there is continuity with keeping on top of the little beasts.", time: "6 months ago", location: "London" },
 ];
 
 const Testimonials = () => {
@@ -41,25 +43,23 @@ const Testimonials = () => {
   const t = testimonials[current];
 
   return (
-    <section id="opiniones" className="py-24 relative bg-accent overflow-hidden" ref={ref}>
+    <section id="reviews" className="py-24 relative bg-accent overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4 md:px-8 max-w-3xl">
         <div className="text-center mb-14 reveal">
-          <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Opiniones</span>
+          <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Reviews</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-accent-foreground">
-            Lo que dicen nuestros clientes<span className="text-primary">.</span>
+            What our clients say<span className="text-primary">.</span>
           </h2>
         </div>
 
         <div className="reveal reveal-delay-1 relative">
-          {/* Arrows */}
-          <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Anterior">
+          <button onClick={prev} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Previous">
             <ChevronLeft className="w-4 h-4 text-accent-foreground/70" />
           </button>
-          <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Siguiente">
+          <button onClick={next} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-14 z-20 w-10 h-10 rounded-full bg-[hsl(0,0%,100%,0.08)] border border-[hsl(0,0%,100%,0.1)] flex items-center justify-center hover:bg-[hsl(0,0%,100%,0.15)] transition-all" aria-label="Next">
             <ChevronRight className="w-4 h-4 text-accent-foreground/70" />
           </button>
 
-          {/* Card */}
           <div className="overflow-hidden rounded-2xl">
             <div key={current} className={direction === "right" ? "slide-in-right" : "slide-in-left"}>
               <div className="bg-[hsl(0,0%,100%,0.05)] border border-[hsl(0,0%,100%,0.08)] rounded-2xl p-8 md:p-12 text-center">
@@ -89,12 +89,11 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Dots */}
         <div className="flex items-center justify-center gap-2 mt-8 reveal reveal-delay-2">
           {testimonials.map((_, i) => (
             <button key={i} onClick={() => slide(i, i > current ? "right" : "left")}
               className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-primary" : "w-2 bg-accent-foreground/20 hover:bg-accent-foreground/30"}`}
-              aria-label={`Opinión ${i + 1}`} />
+              aria-label={`Review ${i + 1}`} />
           ))}
         </div>
       </div>
