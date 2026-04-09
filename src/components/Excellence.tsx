@@ -3,9 +3,9 @@ import technicianInspecting from "@/assets/tech_montcarre.png";
 import { useReveal } from "@/hooks/use-reveal";
 
 const pillars = [
-  { icon: Eye, title: "Intervención estratégica", description: "Procedimientos de baja disrupción que preservan la operatividad de su hogar o empresa." },
-  { icon: Microscope, title: "Diagnóstico técnico", description: "Análisis exhaustivo de vectores y focos para aplicar la metodología más eficiente." },
-  { icon: ShieldCheck, title: "Bioseguridad certificada", description: "Protocolos regulados y biocidas de última generación, sin riesgo para el entorno." },
+  { icon: Eye, title: "Strategic Intervention", description: "Low-disruption procedures that preserve the operability of your home or business." },
+  { icon: Microscope, title: "Technical Diagnosis", description: "Thorough analysis of vectors and hotspots to apply the most efficient methodology." },
+  { icon: ShieldCheck, title: "Certified Biosecurity", description: "Regulated protocols and cutting-edge biocides, safe for your environment." },
 ];
 
 const Excellence = () => {
@@ -19,7 +19,7 @@ const Excellence = () => {
             <div className="rounded-2xl overflow-hidden shadow-cinematic">
               <img 
                 src={technicianInspecting} 
-                alt="Técnico profesional realizando inspección" 
+                alt="Professional technician performing inspection" 
                 className="w-full h-[320px] sm:h-[450px] lg:h-[500px] object-cover object-bottom scale-[1.3] origin-bottom img-cinematic" 
                 loading="lazy" 
                 width={1024} 
@@ -30,14 +30,14 @@ const Excellence = () => {
 
           <div className="order-1 lg:order-2">
             <div className="mb-8 sm:mb-10 reveal reveal-delay-1 flex flex-col items-center text-center md:items-start md:text-left">
-              <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Metodología</span>
+              <span className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-3 block">Methodology</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 leading-[1.2] md:leading-tight">
-                Estándares de calidad<span className="text-primary">.</span>
+                Quality standards<span className="text-primary">.</span>
                 <br />
-                <span className="text-muted-foreground font-normal italic">Eficacia garantizada.</span>
+                <span className="text-muted-foreground font-normal italic">Guaranteed effectiveness.</span>
               </h2>
               <p className="text-muted-foreground text-[15px] sm:text-base leading-[1.6] md:leading-relaxed max-w-sm md:max-w-none">
-                Rechazamos soluciones paliativas. Ejecutamos protocolos de erradicación estructurados que garantizan la seguridad sanitaria de sus espacios.
+                We reject palliative solutions. We execute structured eradication protocols that guarantee the sanitary safety of your spaces.
               </p>
             </div>
 

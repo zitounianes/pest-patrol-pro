@@ -23,6 +23,9 @@ const App = () => (
         <Suspense fallback={<div className="h-screen w-full flex items-center justify-center bg-background"><div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div></div>}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/services/:slug" element={<ServicePage />} />
+            <Route path="/pests/:slug" element={<PestPage />} />
+            {/* Legacy Spanish routes redirect */}
             <Route path="/servicios/:slug" element={<ServicePage />} />
             <Route path="/plagas/:slug" element={<PestPage />} />
             <Route path="*" element={<NotFound />} />
