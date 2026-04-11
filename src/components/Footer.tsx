@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-accent-foreground/8 pt-6 text-center">
-          <p className="text-xs text-accent-foreground/25">© 2026 Environ Pest Control. All rights reserved.</p>
+          <p className="text-xs text-accent-foreground/25">© 2026 Environ. All rights reserved.</p>
         </div>
       </div>
     </footer>

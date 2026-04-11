@@ -65,7 +65,6 @@ const Navbar = () => {
             </div>
             <span className="font-display text-xl font-bold tracking-tight">
               <span className="text-primary">Environ</span>
-              <span className={`${useDarkText ? "text-foreground" : "text-white"} transition-colors duration-300`}> Pest Control</span>
             </span>
           </Link>
 
