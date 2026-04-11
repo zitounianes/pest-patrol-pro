@@ -1,5 +1,5 @@
 import { Eye, Microscope, ShieldCheck } from "lucide-react";
-import technicianInspecting from "@/assets/tech_montcarre.png";
+import technicianInspecting from "@/assets/tech_environ.png";
 import { useReveal } from "@/hooks/use-reveal";
 
 const pillars = [
